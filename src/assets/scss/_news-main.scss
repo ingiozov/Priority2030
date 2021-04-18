@@ -1,0 +1,105 @@
+.news {
+  margin-bottom: 8rem;
+}
+
+.news-heading {
+  margin-top: 8rem;
+  margin-bottom: 7rem;
+}
+
+.news-buttons {
+  margin-bottom: 2rem;
+}
+
+.btn-news {
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 3.4rem;
+  transition: all 0.2s;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.news-item {
+  background: $white;
+  position: relative;
+
+  &__text {
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
+    margin-bottom: 8rem;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 130%;
+  }
+
+  &__btn--main {
+    position: absolute;
+    left: 3.2rem;
+    bottom: 3.2rem;
+  }
+}
+
+.news-item--img {
+  background-size: cover;
+  min-height: 330px;
+}
+
+.news-item--img__1 {
+  background-image: url(../img/img-news-1.jpg);
+}
+.news-item--img__2 {
+  background-image: url(../img/img-news-2.jpg);
+}
+.news-item--img__3 {
+  background-image: url(../img/img-news-3.jpg);
+}
+.news-item--img__4 {
+  background-image: url(../img/img-news-4.jpg);
+}
+.news-item--img__5 {
+  background-image: url(../img/img-news-5.jpg);
+}
+
+.label-date {
+  display: flex;
+  margin: 3.2rem 0 2rem 3.2rem;
+
+  &__label {
+    margin: 0;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+
+  img {
+    width: 6px;
+    height: 11px;
+    margin: 0 6px;
+  }
+
+  &__date {
+    margin: 0;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #a2a2a2;
+  }
+}
+
+.btn-main__news {
+  margin-top: 4rem;
+  margin-bottom: 8.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+  img {
+    transform: rotate(90deg);
+  }
+}

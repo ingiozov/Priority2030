@@ -1,0 +1,23 @@
+.submit {
+  height: 68rem;
+  background: url(../img/hand-orig.png), $white;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.submit-container {
+  height: 100%;
+  padding-top: 13rem;
+}
+
+.submit-left {
+  &__header {
+    font-size: 33.2243px;
+    line-height: 39px;
+    margin-bottom: 2.5rem;
+  }
+
+  .btn-submit {
+    margin-top: 9.5rem;
+  }
+}

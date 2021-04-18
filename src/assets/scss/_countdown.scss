@@ -1,0 +1,32 @@
+.deadline {
+  display: flex;
+  // justify-content: space-around;
+
+  .deadline-format {
+    padding: 1.5rem 2.5rem;
+    width: 103.95px;
+    height: 125.46px;
+
+    /* Black */
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    border-radius: 5px;
+    // background-color: $dark-gray;
+    margin-right: 1.8rem;
+
+    .deadline-block {
+      text-align: center;
+      h5 {
+        margin: 0;
+
+        font-size: 50.1831px;
+        line-height: 59px;
+      }
+      span {
+        font-size: 24.3645px;
+        line-height: 29px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.header {
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 120%;
+}
+
+.header-small {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 110%;
+}
+
+.btn-main {
+  width: 232px;
+  height: 47px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  background: $color-primary;
+  color: $white;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  img {
+    margin-left: 5px;
+    transform: translateY(-1.6px);
+  }
+}
+
+.news-item__btn {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-primary;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  img {
+    margin-left: 5px;
+    transform: translateY(-1.6px);
+  }
+}

@@ -1,0 +1,55 @@
+.uni-news {
+  padding-bottom: 8rem;
+  &__header {
+    margin-top: 8.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.uni-news-item {
+  background: $white;
+  position: relative;
+
+  &__img {
+    min-height: 230px;
+    margin-bottom: 2.2rem;
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: $dark-gray;
+    margin-left: 4rem;
+    margin-bottom: 2.2rem;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 4rem;
+    margin-bottom: 8rem;
+  }
+
+  &__btn {
+    margin-left: 4rem;
+    margin-bottom: 3.1rem;
+    // position: absolute;
+    // left: 4rem;
+    // bottom: 3.2rem;
+  }
+}
+
+.uni-news-item__img--1 {
+  background-image: url(../img/img-uninews-1.jpg);
+  background-size: cover;
+}
+.uni-news-item__img--2 {
+  background-image: url(../img/img-uninews-2.jpg);
+  background-size: cover;
+}
+.uni-news-item__img--3 {
+  background-image: url(../img/img-uninews-3.jpg);
+  background-size: cover;
+}

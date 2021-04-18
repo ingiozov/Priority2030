@@ -1,0 +1,59 @@
+.cite {
+  background-color: $white;
+  height: 71.4rem;
+  padding: 10rem 20rem;
+}
+
+.cite-logo {
+  margin-bottom: 10rem;
+}
+
+.cite-quote {
+  margin-bottom: 4rem;
+  position: relative;
+
+  .quote-wrapper {
+    position: absolute;
+    top: -3rem;
+    left: -10rem;
+    // z-index: -1;
+  }
+
+  .quote-icon {
+    mix-blend-mode: multiply;
+    z-index: -1;
+  }
+
+  .quote {
+    font-size: 30px;
+    line-height: 140%;
+  }
+}
+
+.cite-cred {
+  display: flex;
+  align-items: center;
+
+  .img-container {
+    margin-right: 3rem;
+    width: 18rem;
+    height: 18rem;
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .cite-cred--container {
+    h6 {
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 120%;
+      margin: 0;
+    }
+  }
+}
