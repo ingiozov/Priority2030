@@ -1,0 +1,40 @@
+.about-intro {
+  margin-top: 8rem;
+  // height: 550px;
+}
+
+.about-intro-left {
+  &__header {
+    margin-bottom: 8rem;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 3rem;
+  }
+
+  &__text2 {
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 12rem;
+
+    span {
+      font-weight: 900;
+      color: $color-primary;
+    }
+  }
+}
+
+.about-intro-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  &__img {
+    transform: scale(1.21);
+    // height: 450px;
+    // width: 710px;
+    // margin-top: auto;
+    margin-bottom: 6.5rem;
+  }
+}

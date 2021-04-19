@@ -1,0 +1,54 @@
+.about-tasks {
+  background: $white;
+  padding-top: 8.6rem;
+  padding-bottom: 4rem;
+}
+
+.about-tasks__header {
+  margin-bottom: 4rem;
+}
+
+.about-tasks-item {
+  &--img-container {
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    // width: auto;
+    height: 70px;
+    &__img1 {
+      display: block;
+      margin: 0 auto;
+    }
+    &__img2 {
+      display: block;
+      margin: 0 auto;
+    }
+    &__img3 {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  &--list {
+    list-style: none;
+  }
+
+  &--list__item {
+    font-size: 1.5rem;
+    line-height: 120%;
+    margin-bottom: 1.5rem;
+
+    &::before {
+      content: '\2022';
+      color: $color-primary;
+      font-weight: bold;
+      display: inline-block;
+      width: 1rem;
+      margin-left: -1.5rem;
+    }
+  }
+}
