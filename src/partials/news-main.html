@@ -2,7 +2,7 @@
   <h2 class="header news-heading">НОВОСТИ</h2>
   <div class="news-buttons"></div>
   <div class="news-container grid-x grid-margin-x grid-margin-y"></div>
-  <button class="btn-main btn-main__news">
+  <button id="loadmore" class="btn-main btn-main__news">
     смотреть еще<img src="../assets/img/btn-union.png" alt="" />
   </button>
 </section>
@@ -10,6 +10,44 @@
 <script>
   // NEWS FILTERING
   const menu = [
+    {
+      id: 1,
+      category: 'Наука и технологии',
+      img: 'news-item--img__1',
+      date: '22 июля 2020',
+      text:
+        'Университетам - участникам ПСАЛ будут выделены дополнительные средства на развитие науки',
+    },
+    {
+      id: 2,
+      category: 'Регионы',
+      img: 'news-item--img__2',
+      date: '21 июля 2020',
+      text: 'Старт новой Программы поддержки вузов будет дан в конце сентября',
+    },
+    {
+      id: 3,
+      category: 'Таланты',
+      img: 'news-item--img__3',
+      date: '15 июля 2020',
+      text: 'Особые условия для творческих вузов',
+    },
+    {
+      id: 4,
+      category: 'Партнерство',
+      img: 'news-item--img__4',
+      date: '10 июля 2020',
+      text:
+        'Дизайн Программы стратегического академического лидерства обсужден с университетским и академическим сообществом',
+    },
+    {
+      id: 5,
+      category: 'События',
+      img: 'news-item--img__5',
+      date: '10 июля 2020',
+      text:
+        'Новый проект господдержки вузов учтет позитивный опыт предшествующих программ',
+    },
     {
       id: 1,
       category: 'Наука и технологии',
@@ -126,4 +164,25 @@
 
   ////////////////////////
   // END NEWS FILTERING
+
+  ///////////////////////
+  // LOAD MORE
+
+  const loadmore = document.querySelector('#loadmore')
+
+  let currentItems = 2
+  loadmore.addEventListener('click', (e) => {
+    const elementList = [...document.querySelectorAll('.news-item')]
+    for (let i = currentItems; i < currentItems + 2; i++) {
+      if (elementList[i]) {
+        elementList[i].style.display = 'block'
+      }
+    }
+    currentItems += 2
+
+    // Load more button will be hidden after list fully loaded
+    if (currentItems >= elementList.length) {
+      event.target.style.display = 'none'
+    }
+  })
 </script>

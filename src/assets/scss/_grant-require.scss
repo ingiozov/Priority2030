@@ -1,0 +1,31 @@
+.grant-require {
+  padding-top: 8.5rem;
+  padding-bottom: 7rem;
+
+  &__header {
+    margin-bottom: 5rem;
+  }
+}
+
+.grant-require--article {
+  display: flex;
+  margin-bottom: 3rem;
+
+  &__icon {
+    height: 60px;
+    width: 49px;
+    margin-right: 5rem;
+  }
+
+  &__heading {
+    font-size: 30px;
+    line-height: 140%;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 160%;
+  }
+}

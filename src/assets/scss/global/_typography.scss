@@ -62,3 +62,28 @@
     transform: translateY(-1.6px);
   }
 }
+
+.grant-link {
+  font-size: 15px;
+  line-height: 18px;
+  color: #808080;
+  display: flex;
+  align-items: center;
+
+  height: 80px;
+  // padding-bottom: 2rem;
+
+  img {
+    margin-right: 1.5rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+
+.grant-header {
+  font-size: 20px;
+  line-height: 23px;
+}

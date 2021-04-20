@@ -15,6 +15,8 @@ require('foundation-sites')
 
 $(document).foundation()
 
+/////////////////////////////
+// Carousel
 $(document).ready(function () {
   $('.owl-carousel').owlCarousel({
     loop: true,
@@ -32,5 +34,20 @@ $(document).ready(function () {
         items: 3,
       },
     },
+  })
+})
+
+////////////////////////////
+// Accordeon
+
+$(function () {
+  $('ul ul:not(:first)')
+    .hide()
+    .on('click', function (e) {
+      e.stopPropagation()
+    })
+
+  $('.js-menu > li').on('click', function () {
+    $(this).find('ul').stop(true, true).slideToggle()
   })
 })
