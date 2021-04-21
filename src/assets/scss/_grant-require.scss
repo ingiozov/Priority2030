@@ -29,3 +29,24 @@
     line-height: 160%;
   }
 }
+
+.grant-require--article--list {
+  list-style: none;
+
+  &__item {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 160%;
+    margin-left: 1.6rem;
+    margin-bottom: 1.8em;
+    position: relative;
+
+    &::before {
+      content: url(../img/dot.png);
+      position: absolute;
+      left: -1.4rem;
+      top: -0.3rem;
+      vertical-align: top;
+    }
+  }
+}
