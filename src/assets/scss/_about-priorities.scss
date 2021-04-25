@@ -1,0 +1,84 @@
+.about-priorities {
+  background: $white;
+}
+
+.about-priorities-header {
+  padding-top: 8.6rem;
+  margin-bottom: 8.6rem;
+}
+
+.about-priorities--item {
+  display: flex;
+  margin-bottom: 10rem;
+  padding-right: 4rem;
+  padding-left: 8rem;
+}
+
+.about-priorities__text {
+  font-size: 15px;
+  line-height: 130%;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -30%;
+    left: -8rem;
+  }
+}
+
+.about-priorities__text-1 {
+  &::before {
+    content: url(../img/priority-icon-1.png);
+  }
+}
+.about-priorities__text-2 {
+  &::before {
+    content: url(../img/priority-icon-2.png);
+  }
+}
+.about-priorities__text-3 {
+  &::before {
+    content: url(../img/priority-icon-3.png);
+  }
+}
+.about-priorities__text-4 {
+  &::before {
+    content: url(../img/priority-icon-4.png);
+    left: -9.5rem;
+  }
+}
+.about-priorities__text-5 {
+  &::before {
+    content: url(../img/priority-icon-5.png);
+  }
+}
+.about-priorities__text-6 {
+  &::before {
+    content: url(../img/priority-icon-6.png);
+  }
+}
+.about-priorities__text-7 {
+  &::before {
+    content: url(../img/priority-icon-7.png);
+  }
+}
+.about-priorities__text-8 {
+  &::before {
+    content: url(../img/priority-icon-8.png);
+  }
+}
+.about-priorities__text-9 {
+  &::before {
+    content: url(../img/priority-icon-9.png);
+  }
+}
+
+.about-priorities__img--container {
+  margin-right: 2rem;
+  // width: 100px;
+  // height: 100px;
+}
+
+.about-priorities__img {
+  height: auto;
+}

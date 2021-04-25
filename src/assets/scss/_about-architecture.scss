@@ -1,0 +1,197 @@
+.architecture {
+  background: $white;
+}
+
+.architecture-header {
+  padding-top: 8.6rem;
+  padding-bottom: 4.6rem;
+}
+
+.architecture-heading {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 130%;
+  margin-bottom: 3.3rem;
+}
+
+.architecture-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .left-content {
+    margin: 0 auto;
+
+    img {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
+
+    .left-content-text {
+      font-family: Gerbera;
+      font-size: 18px;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+}
+
+.architecture-center {
+  .center-left {
+    border-left: 2px solid rgba(#a2a2a2, 0.5);
+    padding-left: 3rem;
+    padding-right: 1.5rem;
+
+    .center-left-top {
+      border: 1px solid $color-primary;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.2rem;
+      h6 {
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+      }
+      p {
+        font-size: 15px;
+        line-height: 130%;
+        color: #6b6b74;
+        text-align: center;
+      }
+    }
+
+    .center-left-item {
+      font-size: 15px;
+      line-height: 130%;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+
+      &::before {
+        content: url(../img/dot.png);
+        position: absolute;
+        top: -0.25rem;
+        left: -1.5rem;
+      }
+    }
+  }
+  .center-right {
+    border-right: 2px solid rgba(#a2a2a2, 0.5);
+    padding-left: 1.5rem;
+    padding-right: 3rem;
+
+    .center-right-top {
+      border: 1px solid $color-primary;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.2rem;
+      h6 {
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+      }
+      p {
+        font-size: 15px;
+        line-height: 130%;
+        color: #6b6b74;
+        text-align: center;
+      }
+    }
+
+    .center-right-item {
+      font-size: 15px;
+      line-height: 130%;
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+
+      &::before {
+        content: url(../img/dot.png);
+        position: absolute;
+        top: -0.25rem;
+        left: -1.5rem;
+      }
+    }
+  }
+
+  .center-bottom {
+    border-left: 2px solid rgba(#a2a2a2, 0.5);
+    border-right: 2px solid rgba(#a2a2a2, 0.5);
+    padding: 0 3rem;
+
+    &--content {
+      padding: 2rem;
+      border: 1px solid $color-primary;
+
+      h6 {
+        font-size: 18px;
+        line-height: 150%;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 130%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.architecture-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .right-content {
+    margin: 0 auto;
+
+    .right-content-text {
+      font-size: 18px;
+      line-height: 150%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .right-content-bottom {
+    margin: 0 auto;
+
+    .right-content-bottom-text {
+      font-size: 18px;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+}
+
+.architecture-bottom {
+  margin-top: 6.4rem;
+
+  &--heading {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 130%;
+    margin-bottom: 1.3rem;
+  }
+
+  &--text {
+    font-size: 18px;
+    line-height: 150%;
+
+    margin-left: 2rem;
+    position: relative;
+
+    &::before {
+      content: url(../img/dot.png);
+      position: absolute;
+      top: -0.3rem;
+      left: -2rem;
+    }
+  }
+}

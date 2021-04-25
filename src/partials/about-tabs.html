@@ -1,0 +1,135 @@
+<section class="about-tabs grid-container">
+  <h2 class="about-tabs-header">
+    Ключевой инструмент – поддержка программ развития университетов-участников
+  </h2>
+
+  <h5 class="about-tabs-subheader">
+    Программы развития университетов направлены на достижение прорывов в
+    ключевых областях:
+  </h5>
+
+  <div class="about-tabs--section">
+    <div class="about-tabs--container grid-x">
+      <button
+        class="cell medium-4 about-tab about-tab--1 about-tab--active"
+        data-tab="1"
+      >
+        Исследования и разработки
+      </button>
+      <button class="cell medium-4 about-tab about-tab--2" data-tab="2">
+        Технологии и инновации
+      </button>
+      <button class="cell medium-4 about-tab about-tab--3" data-tab="3">
+        Человеческий капитал
+      </button>
+    </div>
+
+    <div
+      class="grid-x about-tabs--content about-tabs--content--1 about-tabs--content--active"
+    >
+      <div class="cell medium-4 about-tabs--list">
+        <li class="about-tabs--list__item">
+          создание условий для участия студентов и аспирантов в
+          научно-исследовательских и опытно-конструкторских работах,
+          инновационных проектах
+        </li>
+      </div>
+
+      <div class="cell medium-4 about-tabs--list">
+        <li class="about-tabs--list__item">
+          развитие и реализация прорывных научных исследований и разработок
+        </li>
+      </div>
+    </div>
+
+    <div class="grid-x about-tabs--content about-tabs--content--2">
+      <div class="cell medium-4 about-tabs--list">
+        <li class="about-tabs--list__item">
+          развитие материально-технических условий образовательной, научной,
+          инновационной, творческой деятельности университетов
+        </li>
+      </div>
+
+      <div class="cell medium-4 about-tabs--list">
+        <li class="about-tabs--list__item">
+          цифровая трансформация университетов и научных организаций
+        </li>
+      </div>
+
+      <div class="cell medium-4 about-tabs--list">
+        <li class="about-tabs--list__item">
+          внедрение в экономику и социальную сферу высоких технологий
+        </li>
+      </div>
+    </div>
+
+    <div class="grid-x about-tabs--content about-tabs--content--3">
+      <div class="cell medium-4 about-tabs--list">
+        <li class="about-tabs--list__item">
+          подготовка кадров для приоритетных направлений научно-технологического
+          развития РФ, субъектов РФ, отраслей экономики и социальной сферы
+        </li>
+
+        <li class="about-tabs--list__item">
+          новые востребованные основные и дополнительные образовательные
+          программы
+        </li>
+
+        <li class="about-tabs--list__item">
+          реализация программ академической мобильности научно-педагогических
+          работников и обучающихся
+        </li>
+      </div>
+
+      <div class="cell medium-4 about-tabs--list">
+        <li class="about-tabs--list__item">
+          развитие кадрового потенциала системы высшего образования, привлечение
+          в университеты ведущих ученых и специалистов-практиков
+        </li>
+
+        <li class="about-tabs--list__item">
+          содействие карьере выпускников университетов в секторе исследований и
+          разработок и высокотехнологичных отраслях экономики
+        </li>
+      </div>
+
+      <div class="cell medium-4 about-tabs--list">
+        <li class="about-tabs--list__item">
+          вовлечение обучающихся и работников университетов к реализации
+          творческих и социально ориентированных проектов
+        </li>
+
+        <li class="about-tabs--list__item">
+          тиражирование лучших практик университета в других университетах, не
+          являющихся участниками программы
+        </li>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll('.about-tab')
+  const tabsContainer = document.querySelector('.about-tabs--container')
+  const tabsContent = document.querySelectorAll('.about-tabs--content')
+
+  tabsContainer.addEventListener('click', function (e) {
+    const clicked = e.target
+
+    if (!clicked) return
+
+    // Remove active classes
+    tabs.forEach((t) => t.classList.remove('about-tab--active'))
+    tabsContent.forEach((c) =>
+      c.classList.remove('about-tabs--content--active')
+    )
+
+    // Activate tab
+    clicked.classList.add('about-tab--active')
+
+    // Activate Content
+    document
+      .querySelector(`.about-tabs--content--${clicked.dataset.tab}`)
+      .classList.add('about-tabs--content--active')
+  })
+</script>
