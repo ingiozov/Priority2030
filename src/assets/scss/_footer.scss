@@ -1,11 +1,13 @@
 .footer {
   background: #6b6b74;
-  height: 18rem;
-  padding: 6rem 12rem;
+}
 
+.footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   overflow: hidden;
+  min-height: 18rem;
 }
 
 .footer-info {
@@ -47,4 +49,14 @@
   line-height: 1.9rem;
   color: $white;
   margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .footer-info {
+    margin-left: 5rem;
+  }
+
+  .footer-links {
+    margin-right: 5rem;
+  }
 }

@@ -1,26 +1,26 @@
 .about-tabs {
-  height: 634px;
+  padding-bottom: 10rem;
 }
 
 .about-tabs-header {
   margin: 8.6rem 0 1.6rem 0;
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: bold;
   line-height: 130%;
 }
 
 .about-tabs-subheader {
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 150%;
   margin-bottom: 6rem;
 }
 
 .about-tab {
-  font-size: 22px;
+  font-size: 2.1rem;
   font-weight: 500;
-  line-height: 160%;
+  line-height: 130%;
   margin-bottom: 4rem;
-  color: #6b6b74;
+  color: rgba(#6b6b74, 0.3);
   cursor: pointer;
   border-bottom: 3px solid rgba(#6b6b74, 0.1);
 
@@ -41,7 +41,7 @@
 }
 
 .about-tabs--list__item {
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 130%;
   list-style: none;
   margin: 0 1.5rem;
@@ -53,5 +53,22 @@
     position: absolute;
     top: -0.3rem;
     left: -1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .about-tabs-header {
+    margin: 7.6rem 0 1.6rem 5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 105.2%;
+  }
+
+  .about-tabs-subheader {
+    margin-left: 5rem;
+  }
+
+  .about-tabs--section {
+    padding: 0 5rem;
   }
 }

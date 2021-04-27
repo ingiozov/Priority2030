@@ -50,3 +50,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .grant-require--article {
+    padding: 0 5rem;
+  }
+
+  .grant-require__header {
+    margin-left: 5rem;
+  }
+}

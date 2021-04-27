@@ -1,7 +1,7 @@
 .cite {
   background-color: $white;
-  height: 71.4rem;
-  padding: 10rem 20rem;
+
+  padding: 9rem 20rem;
 }
 
 .cite-logo {
@@ -25,7 +25,7 @@
   }
 
   .quote {
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 140%;
   }
 }
@@ -36,8 +36,7 @@
 
   .img-container {
     margin-right: 3rem;
-    width: 18rem;
-    height: 18rem;
+
     img {
       border-radius: 50%;
     }
@@ -45,15 +44,35 @@
 
   .cite-cred--container {
     h6 {
-      font-size: 20px;
-      line-height: 23px;
+      font-size: 2rem;
+      line-height: 2.3rem;
       font-weight: bold;
     }
 
     p {
-      font-size: 20px;
+      font-size: 2rem;
       line-height: 120%;
       margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cite {
+    padding: 7rem 13rem;
+  }
+
+  .cite-logo {
+    img {
+      width: 36rem;
+      height: auto;
+    }
+  }
+
+  .img-container {
+    img {
+      width: 12.5rem;
+      height: auto;
     }
   }
 }

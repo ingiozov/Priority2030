@@ -1,26 +1,26 @@
 .header {
   font-weight: bold;
-  font-size: 50px;
+  font-size: 5rem;
   line-height: 120%;
 }
 
 .header-small {
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 500;
   line-height: 110%;
 }
 
 .header-tiny {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
-  line-height: 23px;
+  line-height: 2.3rem;
 }
 
 .btn-main {
-  width: 232px;
-  height: 47px;
-  font-size: 14px;
-  line-height: 16px;
+  width: 23.2rem;
+  height: 4.7rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
   font-weight: 500;
   background: $color-primary;
   color: $white;
@@ -34,8 +34,8 @@
 }
 
 .news-item__btn {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
   color: $color-primary;
   text-transform: uppercase;
   cursor: pointer;
@@ -64,13 +64,13 @@
 }
 
 .grant-link {
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
   color: #808080;
   display: flex;
   align-items: center;
 
-  height: 80px;
+  height: 8rem;
   // padding-bottom: 2rem;
 
   img {
@@ -84,14 +84,14 @@
 }
 
 .grant-header {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
-  line-height: 23px;
+  line-height: 2.3rem;
 
   &--warning {
-    font-size: 20px;
+    font-size: 2rem;
     // font-weight: bold;
-    line-height: 23px;
+    line-height: 2.3rem;
     margin-left: 4rem;
     margin-right: 12rem;
     margin-top: 3.5rem;
@@ -110,8 +110,8 @@
   }
 
   &--link {
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 2rem;
+    line-height: 2.3rem;
 
     color: $black;
 
@@ -143,4 +143,11 @@
   font-size: 135.577px;
   line-height: 105.2%;
   color: $color-primary;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header {
+    font-size: 4rem;
+    line-height: 105.2%;
+  }
 }

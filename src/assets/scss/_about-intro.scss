@@ -1,6 +1,5 @@
 .about-intro {
   margin-top: 8rem;
-  // height: 550px;
 }
 
 .about-intro-left {
@@ -9,14 +8,14 @@
   }
 
   &__text {
-    font-size: 20px;
-    line-height: 140%;
+    font-size: 1.8rem;
+    line-height: 150%;
     margin-bottom: 3rem;
   }
 
   &__text2 {
-    font-size: 20px;
-    line-height: 140%;
+    font-size: 1.8rem;
+    line-height: 150%;
     margin-bottom: 12rem;
 
     span {
@@ -35,6 +34,24 @@
     // height: 450px;
     // width: 710px;
     // margin-top: auto;
-    margin-bottom: 6.5rem;
+    margin-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .about-intro-left__header {
+    margin-bottom: 5.6rem;
+    margin-left: 5rem;
+  }
+
+  .about-intro-left__text {
+    margin-left: 5rem;
+  }
+  .about-intro-left__text2 {
+    margin-left: 5rem;
+  }
+
+  .about-intro-right__img {
+    transform: scale(1);
   }
 }

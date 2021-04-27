@@ -130,3 +130,14 @@
   width: 275px;
   height: 424px;
 }
+
+@media only screen and (max-width: 1024px) {
+  .about-accordeon__header {
+    padding-left: 5rem;
+  }
+
+  .accordeon {
+    padding-right: 0rem;
+    padding-left: 5rem;
+  }
+}

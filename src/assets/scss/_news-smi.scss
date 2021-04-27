@@ -1,5 +1,4 @@
 .news-smi {
-  // height: 66rem;
   background: $white;
   padding-bottom: 10rem;
 }
@@ -11,8 +10,8 @@
 
 .news-smi--items--item {
   &__date {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     text-transform: uppercase;
     color: $dark-gray;
 
@@ -24,11 +23,23 @@
   }
 
   &__text {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
-    line-height: 19px;
+    line-height: 1.9rem;
     color: #222222;
 
     margin-bottom: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .news-smi__header {
+    padding-top: 7.4rem;
+    padding-bottom: 5rem;
+    margin-left: 5rem;
+  }
+
+  .news-smi--items {
+    padding: 0 5rem;
   }
 }

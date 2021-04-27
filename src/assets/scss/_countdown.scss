@@ -4,8 +4,8 @@
 
   .deadline-format {
     padding: 1.5rem 2.5rem;
-    width: 103.95px;
-    height: 125.46px;
+    width: 10.4rem;
+    height: 12.55rem;
 
     /* Black */
 
@@ -19,14 +19,20 @@
       text-align: center;
       h5 {
         margin: 0;
-
-        font-size: 50.1831px;
-        line-height: 59px;
+        font-size: 5rem;
+        line-height: 5.9rem;
       }
       span {
-        font-size: 24.3645px;
-        line-height: 29px;
+        font-size: 2.43rem;
+        line-height: 2.9rem;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .deadline .deadline-format {
+    width: 9.8rem;
+    height: 12rem;
   }
 }

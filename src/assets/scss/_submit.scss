@@ -1,23 +1,46 @@
 .submit {
-  height: 68rem;
+  min-height: 68rem;
   background: url(../img/hand-orig.png), $white;
   background-repeat: no-repeat;
   background-position: right;
+  background-size: 60%;
 }
 
 .submit-container {
-  height: 100%;
+  // height: 100%;
   padding-top: 13rem;
 }
 
 .submit-left {
+  padding-left: 3.5rem;
   &__header {
-    font-size: 33.2243px;
-    line-height: 39px;
+    font-size: 3.32rem;
+    line-height: 3.9rem;
     margin-bottom: 2.5rem;
   }
 
   .btn-submit {
     margin-top: 9.5rem;
+    margin-bottom: 10.8rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .submit {
+    min-height: 55.3rem;
+    background-size: 57%;
+  }
+
+  .submit-container {
+    padding-top: 7.4rem;
+  }
+
+  .submit-left__header {
+    margin-bottom: 3.7rem;
+    padding-right: 15rem;
+  }
+
+  .submit-left .btn-submit {
+    margin-top: 7.4rem;
   }
 }

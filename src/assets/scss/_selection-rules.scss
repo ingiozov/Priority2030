@@ -1,5 +1,5 @@
 .selection-rules {
-  height: 68rem;
+  min-height: 68rem;
 
   position: relative;
 
@@ -11,29 +11,27 @@
     position: absolute;
     bottom: 0;
     left: 0;
-  }
 
-  img {
-    // position: absolute;
-
-    mix-blend-mode: multiply;
-    opacity: 0.8;
-    z-index: -1;
+    img {
+      mix-blend-mode: multiply;
+      opacity: 0.8;
+      z-index: -1;
+    }
   }
 }
 
 .selection-rules-right {
   display: flex;
   justify-content: center;
-
-  // align-items: center;
   flex-direction: column;
+
+  padding-right: 10rem;
 
   z-index: 1;
 
   &__header {
     color: $color-primary;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
     font-style: normal;
     line-height: 113.7%;
@@ -45,7 +43,7 @@
   }
 
   &__text {
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 140%;
 
     margin-bottom: 10rem;
@@ -54,8 +52,8 @@
   &__btn {
     text-align: left;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
     color: $color-primary;
 
     cursor: pointer;
@@ -72,5 +70,25 @@
       transform: translateY(-1.5px);
       // width: 20px;
     }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .selection-rules {
+    min-height: 55rem;
+    padding: 7.5rem 4rem;
+  }
+
+  .selection-rules-wrapper img {
+    width: 67rem;
+    height: auto;
+  }
+
+  .selection-rules__header {
+    font-size: 4rem;
+  }
+
+  .selection-rules-right {
+    padding-right: 0rem;
   }
 }

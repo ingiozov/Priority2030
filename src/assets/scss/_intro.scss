@@ -1,15 +1,19 @@
 .intro {
   padding: 0;
-  height: 600px;
+  height: 60rem;
 }
 
 .intro-left {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+
   .intro-heading {
-    font-size: 50px;
+    font-size: 5rem;
     line-height: 105.2%;
     font-weight: bold;
 
-    margin: 35% 0 7rem 0;
+    margin: 0% 0 7rem 0;
   }
 }
 
@@ -25,6 +29,17 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .intro {
+    height: 50rem;
+  }
+
+  .intro-left {
+    padding-left: 5rem;
+    .intro-heading {
+      font-size: 4rem;
+    }
+  }
+
   .intro-right {
     img {
       transform: scale(1);

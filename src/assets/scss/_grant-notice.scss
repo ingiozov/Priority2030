@@ -1,7 +1,7 @@
 .grant-notice {
   background: $white;
   padding-top: 3.2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 .grant-notice-logo {
@@ -9,28 +9,21 @@
 }
 
 .grant-notice-text {
-  padding: 0 6rem;
+  padding-right: 15rem;
+  padding-left: 8rem;
 
   &__notice {
     font-size: 2rem;
     line-height: 2.3rem;
-    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .grant-notice {
+    padding-left: 5rem;
   }
 
-  // &__link {
-  //   font-size: 15px;
-  //   line-height: 18px;
-  //   color: #808080;
-  //   display: flex;
-  //   align-items: center;
-
-  //   img {
-  //     margin-right: 1.5rem;
-  //   }
-
-  //   &:hover,
-  //   &:focus {
-  //     color: $color-primary;
-  //   }
-  // }
+  .grant-notice-text {
+    padding: 0 3rem 0 8rem;
+  }
 }

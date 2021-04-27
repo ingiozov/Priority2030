@@ -82,3 +82,20 @@
 .about-priorities__img {
   height: auto;
 }
+
+@media only screen and (max-width: 1024px) {
+  .about-priorities-header {
+    padding-top: 7.4rem;
+    margin-bottom: 6.3rem;
+    margin-left: 5rem;
+  }
+
+  .about-priorities--items {
+    padding: 0 5rem;
+  }
+
+  .about-priorities--item {
+    margin-bottom: 6rem;
+    padding-right: 3rem;
+  }
+}

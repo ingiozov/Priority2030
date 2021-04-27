@@ -8,12 +8,13 @@
 }
 
 .news-buttons {
-  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
 }
 
 .btn-news {
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   cursor: pointer;
@@ -56,7 +57,7 @@
 
 .news-item--img {
   background-size: cover;
-  min-height: 330px;
+  min-height: 30.3rem;
 }
 
 .news-item--img__1 {
@@ -81,8 +82,8 @@
 
   &__label {
     margin: 0;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     text-transform: uppercase;
   }
 
@@ -94,8 +95,8 @@
 
   &__date {
     margin: 0;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     text-transform: uppercase;
     color: #a2a2a2;
   }
@@ -110,5 +111,15 @@
 
   img {
     transform: rotate(90deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .news-item--img {
+    min-height: 25rem;
+  }
+
+  .news-buttons {
+    margin-left: 5rem;
   }
 }

@@ -10,3 +10,9 @@
     // transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .grant-intro-container-left {
+    padding-left: 5rem;
+  }
+}

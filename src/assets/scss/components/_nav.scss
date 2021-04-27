@@ -45,3 +45,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .nav .logo {
+    width: 24.6rem;
+    height: auto;
+
+    margin-left: 5rem;
+  }
+
+  .nav-links {
+    margin-right: 5rem;
+  }
+}
