@@ -1,4 +1,4 @@
-<section class="news-section grid-container grid-x">
+<!-- <section class="news-section grid-container">
   <h2 class="header news-section-header cell small-12">Новости</h2>
   <div class="news-section-links cell medium-12">
     <ul class="news-section-links--list">
@@ -78,4 +78,175 @@
       </button>
     </div>
   </section>
+</section> -->
+
+<section class="news grid-container">
+  <h2 class="header news-heading">Новости</h2>
+  <div class="news-nav">
+    <div class="news-buttons"></div>
+    <a href="news.html" class="news-section-links__btn">
+      все новости
+      <img src="../assets/img/btn-union-red.png" alt="" />
+    </a>
+  </div>
+  <div class="news-container grid-x grid-margin-x grid-margin-y"></div>
 </section>
+
+<script>
+  // NEWS FILTERING
+  const menu = [
+    {
+      id: 1,
+      category: 'Наука и технологии',
+      img: 'news-item--img__1',
+      date: '22 июля 2020',
+      text:
+        'Университетам - участникам ПСАЛ будут выделены дополнительные средства на развитие науки',
+    },
+    {
+      id: 2,
+      category: 'Регионы',
+      img: 'news-item--img__2',
+      date: '21 июля 2020',
+      text: 'Старт новой Программы поддержки вузов будет дан в конце сентября',
+    },
+    {
+      id: 3,
+      category: 'Таланты',
+      img: 'news-item--img__3',
+      date: '15 июля 2020',
+      text: 'Особые условия для творческих вузов',
+    },
+    {
+      id: 4,
+      category: 'Партнерство',
+      img: 'news-item--img__4',
+      date: '10 июля 2020',
+      text:
+        'Дизайн Программы стратегического академического лидерства обсужден с университетским и академическим сообществом',
+    },
+    {
+      id: 5,
+      category: 'События',
+      img: 'news-item--img__5',
+      date: '10 июля 2020',
+      text:
+        'Новый проект господдержки вузов учтет позитивный опыт предшествующих программ',
+    },
+    {
+      id: 1,
+      category: 'Наука и технологии',
+      img: 'news-item--img__1',
+      date: '22 июля 2020',
+      text:
+        'Университетам - участникам ПСАЛ будут выделены дополнительные средства на развитие науки',
+    },
+    {
+      id: 2,
+      category: 'Регионы',
+      img: 'news-item--img__2',
+      date: '21 июля 2020',
+      text: 'Старт новой Программы поддержки вузов будет дан в конце сентября',
+    },
+    {
+      id: 3,
+      category: 'Таланты',
+      img: 'news-item--img__3',
+      date: '15 июля 2020',
+      text: 'Особые условия для творческих вузов',
+    },
+    {
+      id: 4,
+      category: 'Партнерство',
+      img: 'news-item--img__4',
+      date: '10 июля 2020',
+      text:
+        'Дизайн Программы стратегического академического лидерства обсужден с университетским и академическим сообществом',
+    },
+    {
+      id: 5,
+      category: 'События',
+      img: 'news-item--img__5',
+      date: '10 июля 2020',
+      text:
+        'Новый проект господдержки вузов учтет позитивный опыт предшествующих программ',
+    },
+  ]
+
+  const newsContainer = document.querySelector('.news-container')
+
+  const newsBtnsContainer = document.querySelector('.news-buttons')
+
+  // Load items
+  window.addEventListener('DOMContentLoaded', function () {
+    displayMenuItems(menu)
+    displayMenuButtons()
+  })
+
+  const displayMenuItems = (menuItems) => {
+    let displayMenu = menuItems
+      .map((item) => {
+        return `<div class="news-item cell small-12 medium-6">
+            <div class="news-item--img ${item.img}">
+                &nbsp;
+            </div>
+            <div class="label-date">
+              <p class="label-date__label">${item.category}</p>
+              <img src="../assets/img/news-slash.png" alt="" />
+              <p class="label-date__date">${item.date}</p>
+            </div>
+            
+            <div class="news-item__text">
+              ${item.text}
+            </div>
+            <button class="news-item__btn news-item__btn--main">
+              подробнее
+            </button>
+        </div>`
+      })
+      .join('')
+
+    newsContainer.innerHTML = displayMenu
+  }
+
+  const displayMenuButtons = () => {
+    // const categories = new Set(menu.map((item) => item.category))
+    const categories = menu.reduce(
+      function (values, item) {
+        if (!values.includes(item.category)) {
+          values.push(item.category)
+        }
+        return values
+      },
+      ['Все']
+    )
+
+    const categoryBtns = categories
+      .map((category) => {
+        return `<button href="" class="btn-news" data-id="${category}">${category}</button>`
+      })
+      .join('')
+    newsBtnsContainer.innerHTML = categoryBtns
+    const newsBtns = newsBtnsContainer.querySelectorAll('.btn-news')
+    // Filter items
+    newsBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        const category = e.currentTarget.dataset.id
+        const menuCategory = menu.filter((menuItem) => {
+          if (menuItem.category === category) {
+            return menuItem
+          }
+        })
+        if (category === 'Все') {
+          displayMenuItems(menu)
+        } else {
+          displayMenuItems(menuCategory)
+        }
+      })
+    })
+  }
+
+  ////////////////////////
+  // END NEWS FILTERING
+</script>

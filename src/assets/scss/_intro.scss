@@ -18,13 +18,16 @@
   align-items: center;
   justify-content: center;
 
-  // overflow: hidden;
-
   img {
-    // transform: rotate(95deg);
     transform: scale(1.2);
-    // width: 100%;
-    // height: auto;
     z-index: -1;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .intro-right {
+    img {
+      transform: scale(1);
+    }
   }
 }

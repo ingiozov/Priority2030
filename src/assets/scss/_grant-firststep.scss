@@ -171,3 +171,17 @@
 .line--opacity {
   opacity: 0;
 }
+
+.grant-firststep-right__list-item--line-dotbot {
+  // border: 1px solid red;
+  margin-bottom: 2rem;
+  position: relative;
+
+  &::after {
+    content: url(../img/Ellipse.png);
+    position: absolute;
+    height: 18px;
+    bottom: -8px;
+    left: -7.8px;
+  }
+}

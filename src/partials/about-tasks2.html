@@ -1,0 +1,148 @@
+<section class="about-accordeon">
+  <div class="about-accordeon__items grid-container grid-x">
+    <h2 class="header about-accordeon__header cell small-12">
+      Задачи программы
+    </h2>
+    <div class="accordeon cell medium-7">
+      <div class="accordeon__item">
+        <button class="accordeon__head open">Для страны</button>
+        <div class="accordeon__collapse collapse open">
+          <div class="accordeon__content">
+            <!-- <img class="acc-img-1" src="../assets/img/about-acc-1.png" alt="" /> -->
+            <p class="accordeon__text">
+              увеличение доли российской науки на глобальном рынке исследований
+              и разработок;
+            </p>
+            <p class="accordeon__text">
+              обеспечение привлекательности работы в России для ведущих ученых и
+              молодых перспективных исследователей;
+            </p>
+            <p class="accordeon__text">
+              кадровое обеспечение приоритетных направлений развития науки,
+              технологий, техники, отраслей экономики, социальной сферы;
+            </p>
+            <p class="accordeon__text">
+              использование научного, образовательного и инновационного
+              потенциала университетов для сокращения срока внедрения инноваций
+              в экономику страны и субъектов РФ.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordeon__item">
+        <button class="accordeon__head">Для университетов</button>
+        <div class="accordeon__collapse collapse">
+          <div class="accordeon__content">
+            <!-- <img class="acc-img-2" src="../assets/img/about-acc-2.png" alt="" /> -->
+            <p class="accordeon__text">
+              повышение научно-технологического потенциала российских
+              университетов для создания новых технологий, отраслей и
+              конкурентоспособных продуктов
+            </p>
+            <p class="accordeon__text">
+              расширение межинституционального сетевого взаимодействия
+            </p>
+            <p class="accordeon__text">
+              интеграция академической и университетской науки и международная
+              кооперация
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordeon__item">
+        <button class="accordeon__head">Для общества</button>
+        <div class="accordeon__collapse collapse">
+          <div class="accordeon__content">
+            <!-- <img class="acc-img-3" src="../assets/img/about-acc-3.png" alt="" /> -->
+            <p class="accordeon__text">
+              обеспечение условий для формирования цифровых компетенций и
+              навыков использования цифровых технологий у обучающихся, в том
+              числе у студентов ИТ-специальностей
+            </p>
+            <p class="accordeon__text">
+              повышение качества и востребованности образовательных,
+              научно-технических, социальных услуг российских университетов
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-accordeon-img cell medium-5">
+      <img class="acc-img-1" src="../assets/img/about-acc-1.png" alt="" />
+      <img
+        class="acc-img-2 hidden"
+        src="../assets/img/about-acc-2.png"
+        alt=""
+      />
+      <img
+        class="acc-img-3 hidden"
+        src="../assets/img/about-acc-3.png"
+        alt=""
+      />
+    </div>
+  </div>
+</section>
+
+<script>
+  const accBtns = document.querySelectorAll('.accordeon__head')
+  const accImg1 = document.querySelector('.acc-img-1')
+  const accImg2 = document.querySelector('.acc-img-2')
+  const accImg3 = document.querySelector('.acc-img-3')
+
+  accBtns.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      const accCollapse = item.nextElementSibling
+
+      if (!item.classList.contains('open')) {
+        accCollapse.style.display = 'block'
+        let accHeight = accCollapse.clientHeight
+        setTimeout(() => {
+          accCollapse.style.height = accHeight + 'px'
+          accCollapse.style.display = ''
+        }, 1)
+
+        accCollapse.classList = 'accordeon__collapse collapsing'
+
+        setTimeout(() => {
+          accCollapse.classList = 'accordeon__collapse collapse open'
+          // accCollapse.style.height = ''
+        }, 300)
+      } else {
+        accCollapse.classList = 'accordeon__collapse collapsing'
+
+        setTimeout(() => {
+          accCollapse.style.height = '0px'
+        }, 1)
+
+        setTimeout(() => {
+          accCollapse.classList = 'accordeon__collapse collapse'
+          accCollapse.style.height = ''
+        }, 300)
+      }
+
+      item.classList.toggle('open')
+      item.nextElementSibling.classList.toggle('open')
+    })
+  })
+
+  accBtns[0].addEventListener('click', () => {
+    accImg1.classList.toggle('hidden')
+    accImg1.nextElementSibling.classList.add('hidden')
+    accImg2.nextElementSibling.classList.add('hidden')
+
+    // accImg2.classList.add('hidden')
+    // accImg3.classList.add('hidden')
+  })
+  accBtns[1].addEventListener('click', () => {
+    accImg2.classList.toggle('hidden')
+    accImg2.nextElementSibling.classList.add('hidden')
+    accImg2.previousElementSibling.classList.add('hidden')
+  })
+  accBtns[2].addEventListener('click', () => {
+    accImg3.classList.toggle('hidden')
+    accImg3.previousElementSibling.classList.add('hidden')
+  })
+</script>

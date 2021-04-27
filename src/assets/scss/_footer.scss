@@ -1,16 +1,17 @@
 .footer {
-  background: #26282c;
+  background: #6b6b74;
   height: 18rem;
   padding: 6rem 12rem;
 
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .footer-info {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 300;
-  line-height: 19px;
+  line-height: 1.9rem;
   color: $white;
 }
 
@@ -21,12 +22,12 @@
     display: flex;
     .social-link {
       a {
-        color: $black;
+        color: #6b6b74;
         margin: 0;
       }
 
-      width: 41.21px;
-      height: 41px;
+      width: 4.121rem;
+      height: 4.1rem;
       // padding: 2rem 2.5rem;
 
       font-size: 2rem;
@@ -42,8 +43,8 @@
   }
 }
 .footer-links-text {
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
   color: $white;
   margin-bottom: 1.5rem;
 }

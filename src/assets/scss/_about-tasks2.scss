@@ -1,0 +1,132 @@
+.about-accordeon {
+  // height: 77rem;
+  background: $white;
+  padding-top: 8.6rem;
+  padding-bottom: 8.6rem;
+}
+
+.about-accordeon__header {
+  margin-bottom: 5rem;
+}
+
+.accordeon {
+  padding-right: 4.5rem;
+}
+
+.accordeon__item {
+  border-bottom: 2px solid rgba(#a2a2a2, 0.5);
+  padding-top: 2.3rem;
+}
+
+.accordeon__head {
+  width: 100%;
+  text-align: start;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 130%;
+  cursor: pointer;
+  margin-bottom: 2.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 1.8rem;
+    height: 0.9rem;
+    background-image: url(../img/accordeon-btn.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    transform: rotate(-180deg);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.accordeon__head.open {
+  // font-size: 5rem;
+
+  &::after {
+    transform: rotate(0deg);
+  }
+}
+
+.accordeon__collapse {
+  transition: height 0.35s ease;
+}
+
+.accordeon__collapse.collapse {
+  display: none;
+}
+
+.accordeon__collapse.collapsing {
+  height: 0;
+  overflow: hidden;
+}
+
+.accordeon__collapse.open {
+  display: block;
+}
+
+.accordeon__content {
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.accordeon__text {
+  font-size: 1.5rem;
+  line-height: 130%;
+
+  margin-left: 2rem;
+  margin-right: 2rem;
+  position: relative;
+
+  &::before {
+    content: url(../img/dot.png);
+    position: absolute;
+    top: -0.2rem;
+    left: -2rem;
+  }
+}
+
+.about-accordeon-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-left: 4.5rem;
+  // img {
+  //   width: 100%;
+  //   height: auto;
+  // }
+}
+
+.hidden {
+  display: none;
+}
+
+.acc-img-1 {
+  // position: absolute;
+  // top: 0;
+  // right: -90%;
+  width: 509px;
+  height: 239px;
+}
+
+.acc-img-2 {
+  // position: absolute;
+  // top: -30%;
+  // right: -90%;
+  // width: 70%;
+  // height: auto;
+  width: 438px;
+  height: 388px;
+}
+
+.acc-img-3 {
+  // position: absolute;
+  // top: -50%;
+  // right: -70%;
+  width: 275px;
+  height: 424px;
+}
