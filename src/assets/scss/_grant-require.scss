@@ -12,19 +12,19 @@
   margin-bottom: 3rem;
 
   &__icon {
-    height: 60px;
-    width: 49px;
+    height: 6rem;
+    width: 4.9rem;
     margin-right: 5rem;
   }
 
   &__heading {
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 140%;
     margin-bottom: 1rem;
   }
 
   &__text {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
     line-height: 160%;
   }
@@ -34,7 +34,7 @@
   list-style: none;
 
   &__item {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 300;
     line-height: 160%;
     margin-left: 1.6rem;
@@ -58,5 +58,39 @@
 
   .grant-require__header {
     margin-left: 5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .grant-require__header {
+    margin-left: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .grant-require--article {
+    display: block;
+    padding: 0 2rem;
+    position: relative;
+
+    &__icon {
+      position: absolute;
+      margin: 0;
+    }
+
+    &__heading {
+      padding-left: 8rem;
+      font-size: 2rem;
+      line-height: 130%;
+    }
+
+    &__text {
+      font-size: 1.5rem;
+      line-height: 150%;
+      margin-top: 2rem;
+    }
+  }
+
+  .grant-require__header {
+    margin-left: 2rem;
   }
 }

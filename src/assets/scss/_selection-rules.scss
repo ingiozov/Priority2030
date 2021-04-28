@@ -84,11 +84,34 @@
     height: auto;
   }
 
-  .selection-rules__header {
-    font-size: 4rem;
-  }
-
   .selection-rules-right {
     padding-right: 0rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .selection-rules {
+    min-height: 0rem;
+    padding: 6rem 2rem;
+  }
+
+  .selection-rules__header {
+    margin: 0;
+    margin-bottom: 2.9rem;
+  }
+
+  .selection-rules-right__header {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .selection-rules-right__text {
+    font-size: 2rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .selection-rules-right__btn {
+    margin-bottom: 20rem;
   }
 }

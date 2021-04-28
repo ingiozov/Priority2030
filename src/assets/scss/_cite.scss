@@ -76,3 +76,37 @@
     }
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .cite {
+    padding: 6rem 2rem;
+  }
+
+  .cite-logo {
+    img {
+      width: 28rem;
+      height: auto;
+    }
+  }
+
+  .cite-quote {
+    .quote {
+      font-size: 2rem;
+      line-height: 140%;
+    }
+  }
+
+  .cite-cred .cite-cred--container {
+    h6 {
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 120%;
+      margin: 0;
+    }
+  }
+}

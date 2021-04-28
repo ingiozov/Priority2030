@@ -22,7 +22,23 @@
     />
   </head>
   <body>
-    {{> body}}
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+      <button
+        class="close-button"
+        aria-label="Close menu"
+        type="button"
+        data-close
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+      <ul class="off-nav-links">
+        <li class="off-nav-link"><a href="about.html">О программе</a></li>
+        <li class="off-nav-link"><a href="news.html">Новости</a></li>
+        <li class="off-nav-link"><a href="">Подать заявку</a></li>
+      </ul>
+    </div>
+    <div class="off-canvas-content" data-off-canvas-content>{{> body}}</div>
 
     <script src="{{root}}assets/js/app.js"></script>
     <script src="../assets/owlcarousel/owl.carousel.min.js"></script>

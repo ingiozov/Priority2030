@@ -28,6 +28,10 @@
     color: $black;
     border-bottom: 3px solid $color-primary;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .about-tabs--section {
@@ -60,7 +64,6 @@
   .about-tabs-header {
     margin: 7.6rem 0 1.6rem 5rem;
     font-size: 3rem;
-    font-weight: bold;
     line-height: 105.2%;
   }
 
@@ -70,5 +73,20 @@
 
   .about-tabs--section {
     padding: 0 5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .about-tabs-header {
+    margin: 6rem 2rem 2rem 2rem;
+    font-size: 2rem;
+  }
+
+  .about-tabs-subheader {
+    margin-left: 2rem;
+  }
+
+  .about-tabs--section {
+    padding: 0 2rem;
   }
 }

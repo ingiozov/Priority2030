@@ -28,9 +28,9 @@
   }
 
   &__step {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
-    line-height: 21px;
+    line-height: 2.1rem;
     text-transform: uppercase;
     color: $color-primary;
     margin-right: 4rem;
@@ -56,6 +56,62 @@
   max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 6rem;
+}
+
+.grant-header {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+
+  &--warning {
+    font-size: 2rem;
+    // font-weight: bold;
+    line-height: 2.3rem;
+    margin-left: 4rem;
+    margin-right: 12rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -4rem;
+      height: 100%;
+      width: 0.6rem;
+      background: $color-primary;
+    }
+  }
+
+  &--link {
+    font-size: 2rem;
+    line-height: 2.3rem;
+
+    color: $black;
+
+    transition: all 0.2s;
+
+    margin-bottom: 3.5rem;
+    margin-left: 8rem;
+
+    position: relative;
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+
+    &::before {
+      content: url(../img/icon-rinkce.png);
+      position: absolute;
+      top: 0;
+      left: -8rem;
+      width: 6rem;
+      height: 6rem;
+      transform: translateY(-35%);
+    }
+  }
 }
 
 .grant-firststep-right__list-item {
@@ -191,5 +247,75 @@
   .grant-firststep-right__list-item--list {
     padding-left: 3.5rem;
     padding-right: 5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .grant-firststep-header {
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .grant-firststep-right__header {
+    padding-left: 2rem;
+  }
+
+  .grant-firststep-right__list-item--top {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .grant-firststep-right__list-item--list {
+    padding-left: 0.5rem;
+    padding-right: 2rem;
+  }
+
+  .grant-firststep-right__step {
+    margin-right: 4rem;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+  }
+
+  .grant-firststep-right__line,
+  .grant-firststep-right__line-dot {
+    display: none;
+  }
+
+  .grant-firststep-right__list-item--line {
+    display: none;
+  }
+
+  .grant-firststep-right__list-item--line {
+    display: none;
+  }
+
+  .grant-firststep-right__list-item--item .line {
+    display: none;
+  }
+
+  .grant-firststep-right__list-item--header {
+    margin-left: 4rem;
+  }
+
+  .grant-firststep-right__header {
+    flex-direction: column;
+
+    &--stepline {
+    }
+  }
+
+  .grant-firststep-right__list-item--item .text {
+    margin-bottom: 2rem;
+  }
+
+  .grant-header--warning {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+
+    &::before {
+      left: -2rem;
+    }
   }
 }

@@ -15,6 +15,10 @@
     // background-color: $dark-gray;
     margin-right: 1.8rem;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .deadline-block {
       text-align: center;
       h5 {
@@ -34,5 +38,24 @@
   .deadline .deadline-format {
     width: 9.8rem;
     height: 12rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .deadline .deadline-format {
+    width: 6.2rem;
+    height: 7.5rem;
+  }
+
+  .deadline .deadline-format .deadline-block {
+    h5 {
+      margin: 0;
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+    span {
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+    }
   }
 }

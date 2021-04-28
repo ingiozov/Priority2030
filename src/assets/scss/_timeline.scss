@@ -139,3 +139,39 @@
     padding: 0 5rem;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .timeline-heading {
+    margin-top: 6rem;
+    margin-bottom: 3.4rem;
+    margin-left: 2rem;
+  }
+
+  .timeline-year {
+    font-size: 8rem;
+    margin-bottom: 3.4rem;
+    margin-left: 2rem;
+  }
+
+  .process-wrapper {
+    overflow-x: scroll;
+    padding: 0 1rem;
+  }
+
+  #progress-bar-container {
+    width: 100rem;
+    // min-width: 1000px;
+    overflow-x: scroll;
+    // overflow: hidden;
+  }
+
+  #progress-bar-container ul {
+    // flex-direction: column;
+    // overflow-y: hidden;
+    // overflow-x: scroll;
+  }
+
+  #progress-bar-container li {
+    width: 25rem;
+  }
+}

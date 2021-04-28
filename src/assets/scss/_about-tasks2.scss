@@ -42,6 +42,10 @@
     transform: rotate(-180deg);
     transition: all 0.3s ease-in-out;
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .accordeon__head.open {
@@ -94,11 +98,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // padding-left: 4.5rem;
-  // img {
-  //   width: 100%;
-  //   height: auto;
-  // }
 }
 
 .hidden {
@@ -106,29 +105,24 @@
 }
 
 .acc-img-1 {
-  // position: absolute;
-  // top: 0;
-  // right: -90%;
-  width: 509px;
-  height: 239px;
+  // width: 509px;
+  // height: 239px;
+  width: 80%;
+  height: auto;
 }
 
 .acc-img-2 {
-  // position: absolute;
-  // top: -30%;
-  // right: -90%;
-  // width: 70%;
-  // height: auto;
-  width: 438px;
-  height: 388px;
+  // width: 438px;
+  // height: 388px;
+  width: 80%;
+  height: auto;
 }
 
 .acc-img-3 {
-  // position: absolute;
-  // top: -50%;
-  // right: -70%;
-  width: 275px;
-  height: 424px;
+  // width: 275px;
+  // height: 424px;
+  width: auto;
+  height: 80%;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -139,5 +133,35 @@
   .accordeon {
     padding-right: 0rem;
     padding-left: 5rem;
+  }
+
+  .acc-img-3 {
+    height: 70%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .about-accordeon {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .about-accordeon__header {
+    padding-left: 2rem;
+  }
+
+  .accordeon {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .acc-img-1,
+  .acc-img-2,
+  .acc-img-3 {
+    display: none;
+  }
+
+  .acc-img-3 {
+    height: 50%;
   }
 }

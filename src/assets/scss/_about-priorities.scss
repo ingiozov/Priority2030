@@ -15,7 +15,7 @@
 }
 
 .about-priorities__text {
-  font-size: 15px;
+  font-size: 1.5rem;
   line-height: 130%;
   position: relative;
 
@@ -73,16 +73,6 @@
   }
 }
 
-.about-priorities__img--container {
-  margin-right: 2rem;
-  // width: 100px;
-  // height: 100px;
-}
-
-.about-priorities__img {
-  height: auto;
-}
-
 @media only screen and (max-width: 1024px) {
   .about-priorities-header {
     padding-top: 7.4rem;
@@ -97,5 +87,36 @@
   .about-priorities--item {
     margin-bottom: 6rem;
     padding-right: 3rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .about-priorities-header {
+    padding-top: 6rem;
+    margin-bottom: 3.7rem;
+    margin-left: 2rem;
+  }
+
+  .about-priorities--items {
+    padding: 0 2rem;
+  }
+
+  .about-priorities--item {
+    margin-bottom: 6rem;
+    padding-right: 0rem;
+  }
+
+  .about-priorities__text {
+    &::before {
+      position: absolute;
+      top: 0%;
+      left: -8rem;
+    }
+  }
+
+  .about-priorities__text-4 {
+    &::before {
+      left: -9.5rem;
+    }
   }
 }

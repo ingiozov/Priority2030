@@ -12,7 +12,6 @@
 }
 
 .submit-left {
-  padding-left: 3.5rem;
   &__header {
     font-size: 3.32rem;
     line-height: 3.9rem;
@@ -35,6 +34,10 @@
     padding-top: 7.4rem;
   }
 
+  .submit-left {
+    padding-left: 3.5rem;
+  }
+
   .submit-left__header {
     margin-bottom: 3.7rem;
     padding-right: 15rem;
@@ -42,5 +45,31 @@
 
   .submit-left .btn-submit {
     margin-top: 7.4rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .submit {
+    min-height: 45rem;
+    background-size: 0%;
+  }
+
+  .submit-header {
+    padding-left: 2rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .submit-left {
+    padding-left: 2rem;
+  }
+
+  .submit-left__header {
+    padding-right: 8rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .submit-left .btn-submit {
+    margin-top: 5rem;
+    margin-bottom: 6rem;
   }
 }

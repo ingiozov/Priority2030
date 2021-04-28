@@ -43,3 +43,28 @@
     padding: 0 5rem;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .news-smi__header {
+    padding-top: 6rem;
+    padding-bottom: 3.4rem;
+    margin-left: 2rem;
+  }
+
+  .news-smi--items {
+    padding: 0 2rem;
+  }
+
+  .news-smi--items--item__header {
+    margin-bottom: 2rem;
+  }
+
+  .news-smi--items--item__text {
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+
+  .news-item__btn {
+    margin-bottom: 2rem;
+  }
+}

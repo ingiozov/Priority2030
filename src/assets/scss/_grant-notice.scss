@@ -27,3 +27,18 @@
     padding: 0 3rem 0 8rem;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .grant-notice {
+    padding-left: 2rem;
+  }
+
+  .grant-notice-text {
+    padding: 0 3rem 0 1rem;
+
+    &__notice {
+      font-size: 1.5rem;
+      line-height: 140%;
+    }
+  }
+}

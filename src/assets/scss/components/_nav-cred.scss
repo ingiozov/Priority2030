@@ -58,3 +58,13 @@
     margin-right: 5rem;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .social-links {
+    margin-left: 2rem;
+  }
+
+  .credentials {
+    margin-right: 2rem;
+  }
+}

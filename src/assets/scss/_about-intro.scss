@@ -55,3 +55,22 @@
     transform: scale(1);
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .about-intro-left__header {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
+
+  .about-intro-left__text {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+  .about-intro-left__text2 {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    line-height: 130%;
+    margin-bottom: 1rem;
+  }
+}

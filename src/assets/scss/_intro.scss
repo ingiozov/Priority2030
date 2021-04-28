@@ -1,6 +1,6 @@
 .intro {
   padding: 0;
-  height: 60rem;
+  min-height: 60rem;
 }
 
 .intro-left {
@@ -12,8 +12,8 @@
     font-size: 5rem;
     line-height: 105.2%;
     font-weight: bold;
-
-    margin: 0% 0 7rem 0;
+    height: 20.8rem;
+    margin: 0% 0 5rem 0;
   }
 }
 
@@ -30,19 +30,30 @@
 
 @media only screen and (max-width: 1024px) {
   .intro {
-    height: 50rem;
+    min-height: 50rem;
   }
 
   .intro-left {
     padding-left: 5rem;
     .intro-heading {
       font-size: 4rem;
+      margin-top: 3rem;
     }
   }
 
   .intro-right {
     img {
       transform: scale(1);
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .intro-left {
+    padding-left: 2rem;
+    .intro-heading {
+      font-size: 3rem;
+      margin-bottom: 2rem;
     }
   }
 }

@@ -12,6 +12,7 @@
   font-weight: 500;
   line-height: 130%;
   margin-bottom: 3.3rem;
+  text-align: center;
 }
 
 .architecture-left {
@@ -232,6 +233,108 @@
       &--content {
         padding: 1.1rem 0.5rem;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .architecture-header {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 2rem;
+  }
+
+  .architecture-heading {
+    text-align: left;
+    margin-bottom: 2.1rem;
+  }
+
+  .architecture-wrapper {
+    padding: 0 2rem;
+  }
+
+  .architecture-left {
+    .left-content {
+      // margin: 0 auto;
+      display: flex;
+      align-items: center;
+
+      img {
+        // display: block;
+        // margin: 0 auto;
+        // margin-bottom: 3rem;
+      }
+
+      .left-content-text {
+        // font-family: Gerbera;
+        // font-size: 18px;
+        // line-height: 150%;
+        text-align: left;
+        margin-left: 2.7rem;
+      }
+    }
+  }
+
+  .architecture-center {
+    .center-left {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      border: none;
+    }
+
+    .center-right {
+      padding-right: 0rem;
+      padding-left: 0rem;
+      border: none;
+    }
+
+    .center-bottom {
+      padding-left: 0rem;
+      padding-right: 0rem;
+      border: none;
+      margin-bottom: 3.7rem;
+    }
+  }
+
+  .architecture-right {
+    align-items: flex-start;
+
+    .right-content {
+      margin: 0;
+
+      .right-content-text {
+        font-size: 1.6rem;
+        text-align: left;
+      }
+
+      img {
+        margin: 0;
+        margin-bottom: 4rem;
+      }
+    }
+
+    .right-content-bottom {
+      margin: 0;
+
+      .right-content-bottom-text {
+        font-size: 1.6rem;
+        text-align: left;
+      }
+    }
+  }
+
+  .architecture-bottom {
+    margin-bottom: 8rem;
+
+    &--heading {
+      margin-bottom: 1.5rem;
+    }
+
+    &--text {
+      font-size: 1.5rem;
+      line-height: 130%;
+      margin-bottom: 1.5rem;
+      margin-left: 2rem;
     }
   }
 }

@@ -8,6 +8,11 @@
   margin: 0 auto;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
 .nav-links {
   list-style: none;
   margin: 0;
@@ -16,9 +21,9 @@
   display: flex;
 
   .nav-search {
-    margin-left: 26px;
-    font-size: 16px;
-    line-height: 19px;
+    margin-left: 2.6rem;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
     transition: all 0.2s;
 
     &:hover {
@@ -28,9 +33,9 @@
 }
 
 .nav-link {
-  margin-left: 46px;
-  font-size: 16px;
-  line-height: 19px;
+  margin-left: 4.6rem;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
 
   a {
     color: $black;
@@ -46,6 +51,34 @@
   }
 }
 
+.burger {
+  color: $black;
+  font-size: 2.6rem;
+  margin-right: 5rem;
+}
+
+.off-nav-links {
+  list-style: none;
+  margin-top: 5rem;
+}
+
+.off-nav-link {
+  margin-bottom: 2.6rem;
+  a {
+    color: $black;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    transition: all 0.2s;
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+      border: none;
+      outline: none;
+    }
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .nav .logo {
     width: 24.6rem;
@@ -55,6 +88,18 @@
   }
 
   .nav-links {
+    display: none;
     margin-right: 5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .nav .logo {
+    width: 18rem;
+    margin-left: 2rem;
+  }
+
+  .burger {
+    margin-right: 2rem;
   }
 }

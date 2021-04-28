@@ -116,3 +116,15 @@
     margin-left: 3rem;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .uni-news__header {
+    margin-top: 6rem;
+    margin-bottom: 3.5rem;
+    margin-left: 2rem;
+  }
+
+  .uni-news-items {
+    padding: 0 2rem;
+  }
+}

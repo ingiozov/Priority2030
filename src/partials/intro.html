@@ -1,7 +1,9 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- <div id="word">Alpha</div> -->
 <header class="intro grid-container grid-x">
-  <div class="intro-left cell medium-5">
+  <div class="intro-left cell medium-5 small-12 small-order-2 medium-order-1">
     <div class="intro-left-items">
-      <h1 class="intro-heading">
+      <h1 id="word" class="intro-heading">
         Формирование <br />
         цифровых <br />
         компетенций
@@ -12,7 +14,28 @@
       </button>
     </div>
   </div>
-  <div class="intro-right cell medium-7">
-    <img src="../assets/img/hero2.png" alt="" />
+  <div class="intro-right cell medium-7 small-12 small-order-1 medium-order-2">
+    <img src="../assets/img/hero-3.svg" alt="" />
   </div>
 </header>
+
+<script>
+  $(function () {
+    count = 0
+    wordsArray = [
+      'Формирование цифровых компетенций',
+      'Развитие и самореализация талантов',
+      'Лидерство в науке, образовании и технологиях',
+      'Содействие региональному развитию',
+      'Глобальная конкурентоспособность российских университетов',
+    ]
+    setInterval(function () {
+      count++
+      $('#word').fadeOut(400, function () {
+        $(this)
+          .text(wordsArray[count % wordsArray.length])
+          .fadeIn(400)
+      })
+    }, 5000)
+  })
+</script>
