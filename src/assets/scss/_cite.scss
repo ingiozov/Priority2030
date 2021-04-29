@@ -90,6 +90,13 @@
   }
 
   .cite-quote {
+    .quote-wrapper {
+      position: absolute;
+      top: -3rem;
+      left: -6.5rem;
+      // z-index: -1;
+    }
+
     .quote {
       font-size: 2rem;
       line-height: 140%;
