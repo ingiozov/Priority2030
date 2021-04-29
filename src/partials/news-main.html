@@ -114,9 +114,9 @@
             <div class="news-item__text">
               ${item.text}
             </div>
-            <button class="news-item__btn news-item__btn--main">
+            <a href="news.html" class="news-item__btn news-item__btn--main">
               подробнее
-            </button>
+            </a>
         </div>`
       })
       .join('')
@@ -185,4 +185,29 @@
       event.target.style.display = 'none'
     }
   })
+</script>
+
+<script>
+  /////////////////////
+  // sticky nav
+
+  const header = document.querySelector('.news')
+  const nav = document.querySelector('.nav')
+
+  const navHeight = nav.getBoundingClientRect().height
+
+  const stickyNav = function (entries) {
+    const [entry] = entries
+
+    if (!entry.isIntersecting) nav.classList.add('sticky2')
+    else nav.classList.remove('sticky2')
+  }
+
+  const headerObserver = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`,
+  })
+
+  headerObserver.observe(header)
 </script>

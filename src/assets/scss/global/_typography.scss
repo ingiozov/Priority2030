@@ -22,15 +22,20 @@
   font-size: 1.4rem;
   line-height: 1.6rem;
   font-weight: 500;
-  background: $color-primary;
+  background: #6b6b74;
   color: $white;
   text-transform: uppercase;
   cursor: pointer;
   margin-bottom: 3.6rem;
+  transition: all 0.2s;
 
   img {
     margin-left: 5px;
     transform: translateY(-1.6px);
+  }
+
+  &:hover {
+    background: $color-primary;
   }
 }
 

@@ -19,11 +19,13 @@
 </header>
 
 <script>
+  const leader = 'Лидерство в науке, образовании' + '<br />' + 'и технологиях'
+
   $(function () {
     count = 0
     wordsArray = [
       'Развитие \n и самореализация талантов',
-      'Лидерство в науке, образовании и технологиях',
+      'Лидерство в науке, образовании \n и технологиях',
       'Содействие региональному развитию',
       'Формирование цифровых компетенций',
       'Глобальная конкурентоспособность российских университетов',
@@ -37,4 +39,26 @@
       })
     }, 4000)
   })
+
+  /////////////////////
+  // sticky nav
+  const header = document.querySelector('.intro')
+  const nav = document.querySelector('.nav')
+
+  const navHeight = nav.getBoundingClientRect().height
+
+  const stickyNav = function (entries) {
+    const [entry] = entries
+
+    if (!entry.isIntersecting) nav.classList.add('sticky2')
+    else nav.classList.remove('sticky2')
+  }
+
+  const headerObserver = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`,
+  })
+
+  headerObserver.observe(header)
 </script>

@@ -1,5 +1,6 @@
 .grant-intro {
   background: $light-gray;
+  margin-top: 12.5rem;
 }
 
 .grant-intro-container-left {
@@ -22,6 +23,10 @@
 }
 
 @media only screen and (max-width: 640px) {
+  .grant-intro {
+    margin-top: 6.5rem;
+  }
+
   .grant-intro-container-left {
     padding-left: 2rem;
   }

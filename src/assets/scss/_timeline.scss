@@ -23,6 +23,7 @@
 }
 
 #progress-bar-container ul {
+  position: relative;
   padding: 0;
   margin: 0 1.5rem;
   padding-top: 1.5rem;
@@ -32,6 +33,13 @@
   // margin-top: -40px;
 
   display: flex;
+
+  &::after {
+    content: url(../img/arrow-right-timeline.svg);
+    position: absolute;
+    top: 1.5rem;
+    right: -6rem;
+  }
 }
 
 #progress-bar-container li {

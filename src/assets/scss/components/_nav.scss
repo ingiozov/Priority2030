@@ -1,11 +1,16 @@
 .nav {
+  padding: 3.2rem 0;
+  position: absolute;
+  width: 100%;
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3.2rem 0 0 0;
 
-  max-width: 1410px;
-  margin: 0 auto;
+  // max-width: 1410px;
+  // margin: 0 auto;
 }
 
 .nav-right {
@@ -77,6 +82,15 @@
       outline: none;
     }
   }
+}
+
+.sticky2 {
+  position: fixed;
+  top: 0;
+  // left: 0;
+  background-color: rgba($color: #fff, $alpha: 0.9);
+  z-index: 10;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1024px) {

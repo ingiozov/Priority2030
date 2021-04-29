@@ -4,13 +4,14 @@
     <p class="about-intro-left__text">
       В центре программы «Приоритет 2О3О» (Программа Развития Исследований,
       Образования, Разработок, Инноваций, Технологий и Территорий) – развитие
-      всей высшей школыи науки в стране на следующие 1О лет.
+      всей высшей школы <br />
+      и науки в стране на следующие 9 лет
     </p>
     <p class="about-intro-left__text2">
       <span>Целеполагание к 2О3О</span> – сформировать в России <br />
       более 1ОО прогрессивных современных <br />
       университетов – центров научно-технологического <br />
-      и социально-экономического развития страны.
+      и социально-экономического развития страны
     </p>
   </div>
   <div class="about-intro-right cell medium-6 small-12">
@@ -21,3 +22,25 @@
     />
   </div>
 </section>
+
+<script>
+  const header = document.querySelector('.about-intro')
+  const nav = document.querySelector('.nav')
+
+  const navHeight = nav.getBoundingClientRect().height
+
+  const stickyNav = function (entries) {
+    const [entry] = entries
+
+    if (!entry.isIntersecting) nav.classList.add('sticky2')
+    else nav.classList.remove('sticky2')
+  }
+
+  const headerObserver = new IntersectionObserver(stickyNav, {
+    root: null,
+    threshold: 0,
+    rootMargin: `-${navHeight}px`,
+  })
+
+  headerObserver.observe(header)
+</script>

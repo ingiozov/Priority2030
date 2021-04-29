@@ -1,5 +1,5 @@
 .about-intro {
-  margin-top: 8rem;
+  margin-top: 20rem;
 }
 
 .about-intro-left {
@@ -57,6 +57,10 @@
 }
 
 @media only screen and (max-width: 640px) {
+  .about-intro {
+    margin-top: 12rem;
+  }
+
   .about-intro-left__header {
     margin-bottom: 2rem;
     margin-left: 2rem;
