@@ -51,29 +51,32 @@ $(function () {
     $(this).find('ul').stop(true, true).slideToggle()
   })
 })
-//////////////////////////
-// nav
 
-// const header = document.querySelector('.intro')
-// const headerGrant = document.querySelector('.grant-intro-container')
-// const nav = document.querySelector('.nav')
+/////////////////////////
+/////////////////////
+// Reveal sections
 
-// const navHeight = nav.getBoundingClientRect().height
+const allSections = document.querySelectorAll('.section')
 
-// const stickyNav = function (entries) {
-//   const [entry] = entries
+const revealSection = function (entries, observer) {
+  const [entry] = entries
 
-//   if (!entry.isIntersecting) nav.classList.add('sticky2')
-//   else nav.classList.remove('sticky2')
-// }
+  if (entry.isIntersecting) entry.target.classList.remove('section--hidden')
+  // else entry.target.classList.add('section--hidden')
+}
 
-// const headerObserver = new IntersectionObserver(stickyNav, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: `-${navHeight}px`,
-// })
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+})
 
-// headerObserver.observe(header)
-// headerObserver.observe(headerGrant)
+allSections.forEach((section) => {
+  sectionObserver.observe(section)
+  section.classList.add('section--hidden')
+})
 
-////////////////////////
+////////////////////
+// parallax
+
+var scene = document.getElementById('scene')
+var parallaxInstance = new Parallax(scene)

@@ -1,4 +1,4 @@
-<section class="news grid-container">
+<section class="news news-section section grid-container">
   <h2 class="header news-heading">Новости</h2>
   <div class="news-nav">
     <div class="news-buttons"></div>
@@ -16,7 +16,7 @@
     {
       id: 1,
       category: 'Наука и технологии',
-      img: 'news-item--img__1',
+      img: 'img-news-1.jpg',
       date: '22 июля 2020',
       text:
         'Университетам - участникам ПСАЛ будут выделены дополнительные средства на развитие науки',
@@ -24,21 +24,21 @@
     {
       id: 2,
       category: 'Регионы',
-      img: 'news-item--img__2',
+      img: 'img-news-2.jpg',
       date: '21 июля 2020',
       text: 'Старт новой Программы поддержки вузов будет дан в конце сентября',
     },
     {
       id: 3,
       category: 'Таланты',
-      img: 'news-item--img__3',
+      img: 'img-news-3.jpg',
       date: '15 июля 2020',
       text: 'Особые условия для творческих вузов',
     },
     {
       id: 4,
       category: 'Партнерство',
-      img: 'news-item--img__4',
+      img: 'img-news-4.jpg',
       date: '10 июля 2020',
       text:
         'Дизайн Программы стратегического академического лидерства обсужден с университетским и академическим сообществом',
@@ -46,7 +46,7 @@
     {
       id: 5,
       category: 'События',
-      img: 'news-item--img__5',
+      img: 'img-news-6.jpg',
       date: '10 июля 2020',
       text:
         'Новый проект господдержки вузов учтет позитивный опыт предшествующих программ',
@@ -54,7 +54,7 @@
     {
       id: 1,
       category: 'Наука и технологии',
-      img: 'news-item--img__1',
+      img: 'img-news-1.jpg',
       date: '22 июля 2020',
       text:
         'Университетам - участникам ПСАЛ будут выделены дополнительные средства на развитие науки',
@@ -62,21 +62,21 @@
     {
       id: 2,
       category: 'Регионы',
-      img: 'news-item--img__2',
+      img: 'img-news-2.jpg',
       date: '21 июля 2020',
       text: 'Старт новой Программы поддержки вузов будет дан в конце сентября',
     },
     {
       id: 3,
       category: 'Таланты',
-      img: 'news-item--img__3',
+      img: 'img-news-3.jpg',
       date: '15 июля 2020',
       text: 'Особые условия для творческих вузов',
     },
     {
       id: 4,
       category: 'Партнерство',
-      img: 'news-item--img__4',
+      img: 'img-news-4.jpg',
       date: '10 июля 2020',
       text:
         'Дизайн Программы стратегического академического лидерства обсужден с университетским и академическим сообществом',
@@ -84,7 +84,7 @@
     {
       id: 5,
       category: 'События',
-      img: 'news-item--img__5',
+      img: 'img-news-6.jpg',
       date: '10 июля 2020',
       text:
         'Новый проект господдержки вузов учтет позитивный опыт предшествующих программ',
@@ -105,8 +105,8 @@
     let displayMenu = menuItems
       .map((item) => {
         return `<div class="news-item cell small-12 medium-6">
-            <div class="news-item--img ${item.img}">
-                &nbsp;
+            <div class="news-item--img">
+                <img src="../assets/img/${item.img}" alt="news-image">
             </div>
             <div class="label-date">
               <p class="label-date__label">${item.category}</p>

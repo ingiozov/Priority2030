@@ -1,5 +1,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
 <header class="intro grid-container grid-x">
   <div class="intro-left cell medium-5 small-12 small-order-2 medium-order-1">
     <div class="intro-left-items">
@@ -9,12 +11,56 @@
       </h1>
 
       <button class="btn-main">
-        Подать заявку <img src="../assets/img/btn-union.png" alt="" />
+        Подать заявку <img src="../assets/img/btn-union.png" alt="button" />
       </button>
     </div>
   </div>
   <div class="intro-right cell medium-7 small-12 small-order-1 medium-order-2">
-    <img src="../assets/img/hero-4.png" alt="" />
+    <!-- <img data-depth="0.1" src="../assets/img/hero-6.png" alt="logo" /> -->
+
+    <div class="hero-container">
+      <ul id="scene">
+        <li data-depth="0.1" class="layer">
+          <img src="../assets/img/hero-layer-fluid1.png" alt="logo" />
+        </li>
+
+        <li data-depth="0.1" class="layer">
+          <img src="../assets/img/hero-layer-fluid2.png" alt="logo" />
+        </li>
+
+        <li data-depth="0.2" class="layer">
+          <img src="../assets/img/hero-layer-hand.png" alt="logo" />
+        </li>
+
+        <li data-depth="0.1" class="layer">
+          <img src="../assets/img/hero-layer-head.png" alt="logo" />
+        </li>
+
+        <li data-depth="0.1" class="layer">
+          <img src="../assets/img/hero-layer-numbers.png" alt="logo" />
+        </li>
+
+        <li data-depth="0.1" class="layer">
+          <img src="../assets/img/hero-layer-orbit.png" alt="logo" />
+        </li>
+
+        <li data-depth="0.1" class="layer">
+          <img src="../assets/img/hero-layer-sputnik.png" alt="logo" />
+        </li>
+
+        <li data-depth="0.3" class="layer">
+          <img src="../assets/img/hero-layer-logo.png" alt="logo" />
+        </li>
+
+        <li data-depth="0.6" class="layer">
+          <img src="../assets/img/hero-layer-books.png" alt="logo" />
+        </li>
+
+        <li data-depth="0.9" class="layer">
+          <img src="../assets/img/hero-layer-molecule.png" alt="logo" />
+        </li>
+      </ul>
+    </div>
   </div>
 </header>
 
@@ -24,17 +70,17 @@
   $(function () {
     count = 0
     wordsArray = [
-      'Развитие \n и самореализация талантов',
-      'Лидерство в науке, образовании \n и технологиях',
+      'Развитие<br /> и самореализация талантов',
+      'Лидерство в науке,<br />образовании<br />и технологиях',
       'Содействие региональному развитию',
       'Формирование цифровых компетенций',
-      'Глобальная конкурентоспособность российских университетов',
+      'Глобальная <span>конкурентоспособность</span> российских университетов',
     ]
     setInterval(function () {
       count++
       $('#word').fadeOut(400, function () {
         $(this)
-          .text(wordsArray[count % wordsArray.length])
+          .html(wordsArray[count % wordsArray.length])
           .fadeIn(400)
       })
     }, 4000)
@@ -62,3 +108,5 @@
 
   headerObserver.observe(header)
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>

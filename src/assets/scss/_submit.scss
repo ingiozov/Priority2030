@@ -2,7 +2,7 @@
   min-height: 68rem;
   background: url(../img/hand-orig.png), $white;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: top right;
   background-size: 60%;
 }
 
@@ -21,6 +21,14 @@
   .btn-submit {
     margin-top: 9.5rem;
     margin-bottom: 10.8rem;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .submit {
+    min-height: 85rem;
+    background-size: 50%;
+    background-position: top 50% right;
   }
 }
 

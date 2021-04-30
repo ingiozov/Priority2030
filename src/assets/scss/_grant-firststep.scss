@@ -203,6 +203,12 @@
   }
 }
 
+.grant-firststep-right__heading {
+  span {
+    color: $color-primary;
+  }
+}
+
 .grant-firststep-right--items {
   max-width: 1200px;
   margin: 0 auto;
