@@ -1,4 +1,4 @@
-<section class="about-intro grid-container grid-x">
+<section class="about-intro intro grid-container grid-x">
   <div class="about-intro-left cell medium-6 small-12">
     <h2 class="header about-intro-left__header">О программе</h2>
     <p class="about-intro-left__text">
@@ -22,25 +22,3 @@
     />
   </div>
 </section>
-
-<script>
-  const header = document.querySelector('.about-intro')
-  const nav = document.querySelector('.nav')
-
-  const navHeight = nav.getBoundingClientRect().height
-
-  const stickyNav = function (entries) {
-    const [entry] = entries
-
-    if (!entry.isIntersecting) nav.classList.add('sticky2')
-    else nav.classList.remove('sticky2')
-  }
-
-  const headerObserver = new IntersectionObserver(stickyNav, {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px`,
-  })
-
-  headerObserver.observe(header)
-</script>

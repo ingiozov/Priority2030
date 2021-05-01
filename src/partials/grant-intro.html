@@ -1,4 +1,4 @@
-<section class="grant-intro grid-container">
+<section class="grant-intro intro grid-container">
   <div class="grant-intro-container grid-x">
     <div class="grant-intro-container-left cell medium-6 small-12">
       <h2 class="header grant-intro__header">Каĸ стать участниĸом программы</h2>
@@ -12,25 +12,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  const header = document.querySelector('.grant-intro')
-  const nav = document.querySelector('.nav')
-
-  const navHeight = nav.getBoundingClientRect().height
-
-  const stickyNav = function (entries) {
-    const [entry] = entries
-
-    if (!entry.isIntersecting) nav.classList.add('sticky2')
-    else nav.classList.remove('sticky2')
-  }
-
-  const headerObserver = new IntersectionObserver(stickyNav, {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px`,
-  })
-
-  headerObserver.observe(header)
-</script>

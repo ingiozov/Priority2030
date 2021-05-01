@@ -112,29 +112,3 @@
     </div>
   </div>
 </section>
-
-<script>
-  const tabs = document.querySelectorAll('.about-tab')
-  const tabsContainer = document.querySelector('.about-tabs--container')
-  const tabsContent = document.querySelectorAll('.about-tabs--content')
-
-  tabsContainer.addEventListener('click', function (e) {
-    const clicked = e.target
-
-    if (!clicked) return
-
-    // Remove active classes
-    tabs.forEach((t) => t.classList.remove('about-tab--active'))
-    tabsContent.forEach((c) =>
-      c.classList.remove('about-tabs--content--active')
-    )
-
-    // Activate tab
-    clicked.classList.add('about-tab--active')
-
-    // Activate Content
-    document
-      .querySelector(`.about-tabs--content--${clicked.dataset.tab}`)
-      .classList.add('about-tabs--content--active')
-  })
-</script>

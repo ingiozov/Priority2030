@@ -2,7 +2,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 
-<header class="intro grid-container grid-x">
+<header class="intro main-intro grid-container grid-x">
   <div class="intro-left cell medium-5 small-12 small-order-2 medium-order-1">
     <div class="intro-left-items">
       <h1 id="word" class="intro-heading">
@@ -74,7 +74,7 @@
       'Лидерство в науке,<br />образовании<br />и технологиях',
       'Содействие региональному развитию',
       'Формирование цифровых компетенций',
-      'Глобальная <span>конкурентоспособность</span> российских университетов',
+      'Глобальная конкуренто<br />способность российских университетов',
     ]
     setInterval(function () {
       count++
@@ -85,28 +85,6 @@
       })
     }, 4000)
   })
-
-  /////////////////////
-  // sticky nav
-  const header = document.querySelector('.intro')
-  const nav = document.querySelector('.nav')
-
-  const navHeight = nav.getBoundingClientRect().height
-
-  const stickyNav = function (entries) {
-    const [entry] = entries
-
-    if (!entry.isIntersecting) nav.classList.add('sticky2')
-    else nav.classList.remove('sticky2')
-  }
-
-  const headerObserver = new IntersectionObserver(stickyNav, {
-    root: null,
-    threshold: 0,
-    rootMargin: `-${navHeight}px`,
-  })
-
-  headerObserver.observe(header)
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>

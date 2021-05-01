@@ -212,6 +212,7 @@
   .architecture-center {
     .center-left {
       padding-left: 1rem;
+      padding-right: 0.5rem;
 
       .center-left-top {
         padding: 1.5rem 0rem;
@@ -220,6 +221,7 @@
 
     .center-right {
       padding-right: 1rem;
+      padding-left: 0.5rem;
 
       .center-right-top {
         padding: 1.5rem 0rem;
@@ -259,16 +261,7 @@
       display: flex;
       align-items: center;
 
-      img {
-        // display: block;
-        // margin: 0 auto;
-        // margin-bottom: 3rem;
-      }
-
       .left-content-text {
-        // font-family: Gerbera;
-        // font-size: 18px;
-        // line-height: 150%;
         text-align: left;
         margin-left: 2.7rem;
       }
