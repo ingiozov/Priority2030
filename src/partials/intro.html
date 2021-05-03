@@ -63,28 +63,3 @@
     </div>
   </div>
 </header>
-
-<script>
-  const leader = 'Лидерство в науке, образовании' + '<br />' + 'и технологиях'
-
-  $(function () {
-    count = 0
-    wordsArray = [
-      'Развитие<br /> и самореализация талантов',
-      'Лидерство в науке,<br />образовании<br />и технологиях',
-      'Содействие региональному развитию',
-      'Формирование цифровых компетенций',
-      'Глобальная конкуренто<br />способность российских университетов',
-    ]
-    setInterval(function () {
-      count++
-      $('#word').fadeOut(400, function () {
-        $(this)
-          .html(wordsArray[count % wordsArray.length])
-          .fadeIn(400)
-      })
-    }, 4000)
-  })
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>

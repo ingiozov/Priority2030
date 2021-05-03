@@ -471,3 +471,37 @@ if (tabsContent.length > 0) {
       .classList.add('about-tabs--content--active')
   })
 }
+
+///////////////////////////////
+// text reveal
+
+const text = [
+  'Лидерство в науке,<br />образовании<br />и технологиях',
+  'Содействие региональному развитию',
+  'Формирование цифровых компетенций',
+  'Глобальная конкуренто<br />способность российских университетов',
+  'Развитие<br /> и самореализация талантов',
+]
+let counter = 0
+const elem = document.getElementById('word')
+
+if (elem) {
+  // const inst = setInterval(change, 1000) // to stop after one loop
+
+  const change = () => {
+    elem.classList.add('hide2')
+    setTimeout(() => {
+      elem.innerHTML = text[counter]
+      elem.classList.remove('hide2')
+      counter++
+
+      if (counter >= text.length) {
+        counter = 0
+      }
+    }, 500)
+
+    // clearInterval(inst)
+  }
+
+  setInterval(change, 4000)
+}
