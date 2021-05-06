@@ -1,0 +1,132 @@
+.steps {
+  background: $white;
+}
+
+.steps-header-container {
+  background: $light-gray;
+}
+
+.steps-header {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.steps-step {
+  background: $light-gray;
+}
+
+.a-header {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+  text-transform: uppercase;
+  color: $color-primary;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.steps-header-small {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.1rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.a-container {
+  background-color: $light-gray;
+}
+
+/* Panel style */
+.a-btn {
+  margin: 0;
+  position: relative;
+  // padding: 15px 30px;
+  padding-left: 15rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  // color: #bdbdbd;
+  font-size: 2rem;
+  line-height: 2.3rem;
+
+  display: block;
+
+  // background-color: $light-gray;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  // box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15),
+  //   0 10px 10px -5px rgba(0, 0, 0, 0.1) !important;
+
+  &::before {
+    content: url('../img/icon-require-arrowdown.png');
+    position: absolute;
+    top: 2.1rem;
+    left: 11.3rem;
+
+    transition: all 0.3s;
+  }
+}
+
+.accordion .a-container .a-panel {
+  width: 100%;
+
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0px 10px;
+}
+
+/* Panel style when active */
+.accordion .a-container.active .a-panel {
+  // padding: 15px 10px 10px 10px;
+  opacity: 1;
+  height: auto;
+  max-height: 500px;
+  background: $white;
+}
+
+.a-panel .content {
+  padding: 3rem 3.6rem 3rem 17.2rem;
+}
+
+.a-panel .content .text {
+  position: relative;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  margin-bottom: 2.4rem;
+
+  &::before {
+    content: url(../img/dot.png);
+    position: absolute;
+    top: -0.3rem;
+    left: -2rem;
+  }
+}
+
+.a-panel .content .document {
+  position: relative;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: #808080;
+  margin-left: 1.5rem;
+
+  &::before {
+    content: url(../img/list-icon.png);
+    position: absolute;
+    top: -0.7rem;
+    left: -3.5rem;
+    width: 2rem;
+    height: 2.5rem;
+  }
+}
+
+.accordion .a-container.active .a-btn::before {
+  // content: url('../img/icon-require-arrowup.png');
+  transform: rotate(180deg);
+}

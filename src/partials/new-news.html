@@ -1,52 +1,45 @@
-<section class="news news-section section grid-container">
+<section class="news intro section grid-container">
   <h2 class="header news-heading">Новости</h2>
-  <div class="news-nav">
-    <div class="news-buttons filters">
-      <button class="filter-option" data-filter="*" onclick="filterNews(event)">
-        Все
-      </button>
-      <button
-        class="filter-option"
-        data-filter="science"
-        onclick="filterNews(event)"
-      >
-        Наука и технологии
-      </button>
-      <button
-        class="filter-option"
-        data-filter="states"
-        onclick="filterNews(event)"
-      >
-        Регионы
-      </button>
-      <button
-        class="filter-option"
-        data-filter="talent"
-        onclick="filterNews(event)"
-      >
-        Таланты
-      </button>
-      <button
-        class="filter-option"
-        data-filter="parnter"
-        onclick="filterNews(event)"
-      >
-        Партнерство
-      </button>
-      <button
-        class="filter-option"
-        data-filter="events"
-        onclick="filterNews(event)"
-      >
-        События
-      </button>
-    </div>
-    <a href="news.html" class="news-section-links__btn">
-      все новости
-      <img src="../assets/img/btn-union-red.png" alt="" />
-    </a>
+  <div class="news-buttons filters">
+    <button class="filter-option" data-filter="*" onclick="filterNews(event)">
+      Все
+    </button>
+    <button
+      class="filter-option"
+      data-filter="science"
+      onclick="filterNews(event)"
+    >
+      Наука и технологии
+    </button>
+    <button
+      class="filter-option"
+      data-filter="states"
+      onclick="filterNews(event)"
+    >
+      Регионы
+    </button>
+    <button
+      class="filter-option"
+      data-filter="talent"
+      onclick="filterNews(event)"
+    >
+      Таланты
+    </button>
+    <button
+      class="filter-option"
+      data-filter="parnter"
+      onclick="filterNews(event)"
+    >
+      Партнерство
+    </button>
+    <button
+      class="filter-option"
+      data-filter="events"
+      onclick="filterNews(event)"
+    >
+      События
+    </button>
   </div>
-
   <div class="news-container2 grid-x grid-margin-x grid-margin-y">
     <div class="news-item2 science cell small-12 medium-6">
       <div class="news-item--img">
@@ -258,4 +251,58 @@
       </a>
     </div>
   </div>
+  <button id="loadmore" class="btn-main btn-main__news">
+    смотреть еще<img src="../assets/img/btn-union.png" alt="" />
+  </button>
 </section>
+
+<script>
+  ///////////////////////
+  // LOAD MORE
+
+  // if (document.body.contains(document.querySelector('#loadmore'))) {
+  //   const loadmore = document.querySelector('#loadmore')
+
+  //   let currentItems = 4
+  //   loadmore.addEventListener('click', (e) => {
+  //     const elementList = [...document.querySelectorAll('.news-item2')]
+  //     for (let i = currentItems; i < currentItems + 2; i++) {
+  //       if (elementList[i]) {
+  //         elementList[i].style.display = 'block'
+  //       }
+  //     }
+  //     currentItems += 2
+
+  //     // Load more button will be hidden after list fully loaded
+  //     if (currentItems >= elementList.length) {
+  //       event.target.style.display = 'none'
+  //       currentItems = 4
+  //     }
+  //   })
+  // }
+
+  /////////////////////////////
+  // New News-Filter
+  // function filterNews(e) {
+  //   const loadmore = document.querySelector('#loadmore')
+  //   const news = document.querySelectorAll('.news-item2') // select all animal divs
+  //   let filter = e.target.dataset.filter // grab the value in the event target's data-filter attribute
+  //   if (filter === '*') {
+  //     news.forEach((item, index) => {
+  //       if (index <= 3) {
+  //         item.style.display = 'block'
+  //         loadmore.style.display = 'block'
+  //       } else item.style.display = 'none'
+  //     })
+  //   } else {
+  //     news.forEach((item) => {
+  //       item.classList.contains(filter) // does the animal have the filter in its class list?
+  //         ? (item.style.display = 'block') // if yes, make sure .hidden is not applied
+  //         : (item.style.display = 'none') // if no, apply .hidden
+  //     })
+  //   }
+  // }
+
+  //    ? item.classList.remove('hidden2') // if yes, make sure .hidden is not applied
+  //    : item.classList.add('hidden2') // if no, apply .hidden
+</script>

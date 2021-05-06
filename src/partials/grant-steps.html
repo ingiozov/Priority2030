@@ -1,0 +1,95 @@
+<div class="grid-container full steps">
+  <div class="steps-header-container">
+    <h2 class="header steps-header">Этапы конкурсного отбора</h2>
+  </div>
+  <div class="steps-step">
+    <div class="grid-container grid-x">
+      <div class="cell small-1">
+        <h3 class="a-header">1 ЭТАП</h3>
+      </div>
+
+      <div class="cell small-11">
+        <h4 class="steps-header-small">Подготовка заявки университетом</h4>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="accordion">
+        <!-- First accordian  -->
+
+        <div class="a-container active">
+          <p class="a-btn">Состав заявки <span></span></p>
+          <div class="a-panel">
+            <div class="content grid-container">
+              <p class="text">заявление на участие в отборе</p>
+              <p class="text">программа развития университета</p>
+              <p class="text">
+                письмо организации или органа власти, осуществляющего функции и
+                полномочия учредителя университета, включающее согласие на
+                участие университета в отборе и обязательство по дополнительному
+                финансированию университета в случае его признания кандидатом на
+                участие в программе
+              </p>
+              <p class="text">
+                документ, подтверждающий полномочия лица, действующего от имени
+                университета
+              </p>
+              <p class="text">
+                справка о соответствии университета требованиям и критериям для
+                участия в отборе
+              </p>
+              <a class="document" href="">
+                <!-- <img src="../assets/img/list-icon.png" alt="" /> -->
+                Порядок проведения отбора, пункт 3
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second accordian  -->
+        <div class="a-container">
+          <p class="a-btn">
+            Образец проекта программы развития университета <span></span>
+          </p>
+          <div class="a-panel">Accordion content</div>
+        </div>
+
+        <!-- third accordian  -->
+        <div class="a-container">
+          <p class="a-btn">Title, header <span></span></p>
+          <div class="a-panel">Accordion content</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initAcc(elem, option) {
+    //addEventListener on mouse click
+    document.addEventListener('click', function (e) {
+      //check is the right element clicked
+      if (!e.target.matches(elem + ' .a-btn')) return
+      else {
+        //check if element contains active class
+        if (!e.target.parentElement.classList.contains('active')) {
+          if (option == true) {
+            //if option true remove active class from all other accordions
+            var elementList = document.querySelectorAll(elem + ' .a-container')
+            Array.prototype.forEach.call(elementList, function (e) {
+              e.classList.remove('active')
+            })
+          }
+          //add active class on cliked accordion
+          e.target.parentElement.classList.add('active')
+        } else {
+          //remove active class on cliked accordion
+          e.target.parentElement.classList.remove('active')
+        }
+      }
+    })
+  }
+
+  //activate accordion function
+  initAcc('.accordion', false)
+</script>

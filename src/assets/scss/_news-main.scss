@@ -12,7 +12,8 @@
   margin-bottom: 2.4rem;
 }
 
-.btn-news {
+.btn-news,
+.filter-option {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.6rem;
@@ -59,6 +60,20 @@
       outline: none;
       color: $color-primary;
     }
+  }
+}
+
+.news-item2 {
+  background: $white;
+  position: relative;
+  overflow: hidden;
+  display: none;
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4) {
+    display: block;
   }
 }
 
@@ -141,6 +156,10 @@
 
   .news-buttons {
     margin-left: 5rem;
+  }
+
+  .btn-news {
+    margin-right: 1.5rem;
   }
 }
 
