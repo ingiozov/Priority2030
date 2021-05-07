@@ -262,238 +262,55 @@ getRemainingTime()
 // END NEW COUNTDOWN
 ////////////////////
 
-/////////////////////
-// NEWS FILTERING
-// const menu = [
-//   {
-//     id: 1,
-//     category: 'Наука и технологии',
-//     img: 'img-news-1.jpg',
-//     date: '22 июля 2020',
-//     text:
-//       'Университетам - участникам ПСАЛ будут выделены дополнительные средства на развитие науки',
-//   },
-//   {
-//     id: 2,
-//     category: 'Регионы',
-//     img: 'img-news-2.jpg',
-//     date: '21 июля 2020',
-//     text: 'Старт новой Программы поддержки вузов будет дан в конце сентября',
-//   },
-//   {
-//     id: 3,
-//     category: 'Таланты',
-//     img: 'img-news-3.jpg',
-//     date: '15 июля 2020',
-//     text: 'Особые условия для творческих вузов',
-//   },
-//   {
-//     id: 4,
-//     category: 'Партнерство',
-//     img: 'img-news-4.jpg',
-//     date: '10 июля 2020',
-//     text:
-//       'Дизайн Программы стратегического академического лидерства обсужден с университетским и академическим сообществом',
-//   },
-//   {
-//     id: 5,
-//     category: 'События',
-//     img: 'img-news-6.jpg',
-//     date: '10 июля 2020',
-//     text:
-//       'Новый проект господдержки вузов учтет позитивный опыт предшествующих программ',
-//   },
-//   {
-//     id: 1,
-//     category: 'Наука и технологии',
-//     img: 'img-news-1.jpg',
-//     date: '22 июля 2020',
-//     text:
-//       'Университетам - участникам ПСАЛ будут выделены дополнительные средства на развитие науки',
-//   },
-//   {
-//     id: 2,
-//     category: 'Регионы',
-//     img: 'img-news-2.jpg',
-//     date: '21 июля 2020',
-//     text: 'Старт новой Программы поддержки вузов будет дан в конце сентября',
-//   },
-//   {
-//     id: 3,
-//     category: 'Таланты',
-//     img: 'img-news-3.jpg',
-//     date: '15 июля 2020',
-//     text: 'Особые условия для творческих вузов',
-//   },
-//   {
-//     id: 4,
-//     category: 'Партнерство',
-//     img: 'img-news-4.jpg',
-//     date: '10 июля 2020',
-//     text:
-//       'Дизайн Программы стратегического академического лидерства обсужден с университетским и академическим сообществом',
-//   },
-//   {
-//     id: 5,
-//     category: 'События',
-//     img: 'img-news-6.jpg',
-//     date: '10 июля 2020',
-//     text:
-//       'Новый проект господдержки вузов учтет позитивный опыт предшествующих программ',
-//   },
-// ]
-
-// const newsContainer = document.querySelector('.news-container')
-
-// if (document.body.contains(document.querySelector('.news'))) {
-//   const newsBtnsContainer = document.querySelector('.news-buttons')
-
-//   // Load items
-//   window.addEventListener('DOMContentLoaded', function () {
-//     displayMenuItems(menu)
-//     displayMenuButtons()
-//   })
-
-//   const displayMenuItems = (menuItems) => {
-//     let displayMenu = menuItems
-//       .map((item) => {
-//         return `<div class="news-item cell small-12 medium-6">
-//             <div class="news-item--img">
-//                 <object data="../assets/img/${item.img}" type="image/png">
-//                     <img src="../assets/img/no_photo.png" alt="news-image">
-//                 </object>
-//             </div>
-//             <div class="label-date">
-//               <p class="label-date__label">${item.category}</p>
-//               <img src="../assets/img/news-slash.png" alt="" />
-//               <p class="label-date__date">${item.date}</p>
-//             </div>
-
-//             <div class="news-item__text">
-//               ${item.text}
-//             </div>
-//             <a href="news.html" class="news-item__btn news-item__btn--main">
-//               подробнее
-//             </a>
-//         </div>`
-//       })
-//       .join('')
-
-//     newsContainer.innerHTML = displayMenu
-//   }
-
-//   const displayMenuButtons = () => {
-//     // const categories = new Set(menu.map((item) => item.category))
-//     const categories = menu.reduce(
-//       function (values, item) {
-//         if (!values.includes(item.category)) {
-//           values.push(item.category)
-//         }
-//         return values
-//       },
-//       ['Все']
-//     )
-
-//     const categoryBtns = categories
-//       .map((category) => {
-//         return `<button class="btn-news" data-id="${category}">${category}</button>`
-//       })
-//       .join('')
-//     newsBtnsContainer.innerHTML = categoryBtns
-//     const newsBtns = newsBtnsContainer.querySelectorAll('.btn-news')
-//     // Filter items
-//     newsBtns.forEach((btn) => {
-//       btn.addEventListener('click', (e) => {
-//         e.preventDefault()
-//         const category = e.currentTarget.dataset.id
-//         const menuCategory = menu.filter((menuItem) => {
-//           if (menuItem.category === category) {
-//             return menuItem
-//           }
-//         })
-//         if (category === 'Все') {
-//           displayMenuItems(menu)
-//         } else {
-//           displayMenuItems(menuCategory)
-//         }
-//       })
-//     })
-//   }
-// }
-
-////////////////////////
-// END NEWS FILTERING
-
 ///////////////////////////
 // New News Filtering
 
-// window.filterNews = (e) => {
-//   const loadmore = document.querySelector('#loadmore')
-//   const news = document.querySelectorAll('.news-item2') // select all animal divs
-//   let filter = e.target.dataset.filter // grab the value in the event target's data-filter attribute
-//   if (filter === '*') {
-//     news.forEach((item, index) => {
-//       if (index <= 3) {
-//         item.style.display = 'block'
-//         if (loadmore) loadmore.style.display = 'block'
-//       } else item.style.display = 'none'
-//     })
-//   } else {
-//     news.forEach((item) => {
-//       item.classList.contains(filter) // does the animal have the filter in its class list?
-//         ? (item.style.display = 'block') // if yes, make sure .hidden is not applied
-//         : (item.style.display = 'none') // if no, apply .hidden
-//     })
-//   }
-// }
+window.filterNews = (e) => {
+  const loadmore = document.querySelector('#loadmore')
+  const news = document.querySelectorAll('.news-item2')
+  let filter = e.target.dataset.filter
+  if (filter === '*') {
+    news.forEach((item, index) => {
+      if (index <= 3) {
+        item.style.display = 'block'
+        if (loadmore) loadmore.style.display = 'block'
+      } else item.style.display = 'none'
+    })
+  } else {
+    news.forEach((item) => {
+      item.classList.contains(filter)
+        ? (item.style.display = 'block')
+        : (item.style.display = 'none')
+    })
+  }
+}
 
 //    ? item.classList.remove('hidden2') // if yes, make sure .hidden is not applied
 //    : item.classList.add('hidden2') // if no, apply .hidden
 
 ///////////////////////
 // LOAD MORE
-
-// if (document.body.contains(document.querySelector('#loadmore'))) {
-//   const loadmore = document.querySelector('#loadmore')
-
-//   let currentItems = 4
-//   loadmore.addEventListener('click', (e) => {
-//     const elementList = [...document.querySelectorAll('.news-item2')]
-//     for (let i = currentItems; i < currentItems + 2; i++) {
-//       if (elementList[i]) {
-//         elementList[i].style.display = 'block'
-//       }
-//     }
-//     currentItems += 2
-
-//     // Load more button will be hidden after list fully loaded
-//     if (currentItems >= elementList.length) {
-//       event.target.style.display = 'none'
-//     }
-//   })
-// }
-/////////////////////////
 // New Load More
-// if (document.body.contains(document.querySelector('#loadmore'))) {
-//   const loadmore = document.querySelector('#loadmore')
+if (document.body.contains(document.querySelector('#loadmore'))) {
+  const loadmore = document.querySelector('#loadmore')
 
-//   let currentItems = 4
-//   loadmore.addEventListener('click', (e) => {
-//     const elementList = [...document.querySelectorAll('.news-item2')]
-//     for (let i = currentItems; i < currentItems + 2; i++) {
-//       if (elementList[i]) {
-//         elementList[i].style.display = 'block'
-//       }
-//     }
-//     currentItems += 2
+  let currentItems = 4
+  loadmore.addEventListener('click', (e) => {
+    const elementList = [...document.querySelectorAll('.news-item2')]
+    for (let i = currentItems; i < currentItems + 2; i++) {
+      if (elementList[i]) {
+        elementList[i].style.display = 'block'
+      }
+    }
+    currentItems += 2
 
-//     // Load more button will be hidden after list fully loaded
-//     if (currentItems >= elementList.length) {
-//       event.target.style.display = 'none'
-//       currentItems = 4
-//     }
-//   })
-// }
+    // Load more button will be hidden after list fully loaded
+    if (currentItems >= elementList.length) {
+      event.target.style.display = 'none'
+      currentItems = 4
+    }
+  })
+}
 
 ////////////////////////////
 // tabs

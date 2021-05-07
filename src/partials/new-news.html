@@ -256,7 +256,7 @@
   </button>
 </section>
 
-<script>
+<!-- <script>
   ///////////////////////
   // LOAD MORE
 
@@ -283,23 +283,24 @@
 
   /////////////////////////////
   // New News-Filter
-  function filterNews(e) {
+
+  window.filterNews = (e) => {
     const loadmore = document.querySelector('#loadmore')
-    const news = document.querySelectorAll('.news-item2') // select all animal divs
-    let filter = e.target.dataset.filter // grab the value in the event target's data-filter attribute
+    const news = document.querySelectorAll('.news-item2')
+    let filter = e.target.dataset.filter
     if (filter === '*') {
       news.forEach((item, index) => {
         if (index <= 3) {
           item.style.display = 'block'
-          loadmore.style.display = 'block'
+          if (loadmore) loadmore.style.display = 'block'
         } else item.style.display = 'none'
       })
     } else {
       news.forEach((item) => {
-        item.classList.contains(filter) // does the animal have the filter in its class list?
-          ? (item.style.display = 'block') // if yes, make sure .hidden is not applied
-          : (item.style.display = 'none') // if no, apply .hidden
+        item.classList.contains(filter)
+          ? (item.style.display = 'block')
+          : (item.style.display = 'none')
       })
     }
   }
-</script>
+</script> -->
