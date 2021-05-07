@@ -427,25 +427,28 @@ getRemainingTime()
 ///////////////////////////
 // New News Filtering
 
-window.filterNews = (e) => {
-  const loadmore = document.querySelector('#loadmore')
-  const news = document.querySelectorAll('.news-item2') // select all animal divs
-  let filter = e.target.dataset.filter // grab the value in the event target's data-filter attribute
-  if (filter === '*') {
-    news.forEach((item, index) => {
-      if (index <= 3) {
-        item.style.display = 'block'
-        if (loadmore) loadmore.style.display = 'block'
-      } else item.style.display = 'none'
-    })
-  } else {
-    news.forEach((item) => {
-      item.classList.contains(filter) // does the animal have the filter in its class list?
-        ? (item.style.display = 'block') // if yes, make sure .hidden is not applied
-        : (item.style.display = 'none') // if no, apply .hidden
-    })
-  }
-}
+// window.filterNews = (e) => {
+//   const loadmore = document.querySelector('#loadmore')
+//   const news = document.querySelectorAll('.news-item2') // select all animal divs
+//   let filter = e.target.dataset.filter // grab the value in the event target's data-filter attribute
+//   if (filter === '*') {
+//     news.forEach((item, index) => {
+//       if (index <= 3) {
+//         item.style.display = 'block'
+//         if (loadmore) loadmore.style.display = 'block'
+//       } else item.style.display = 'none'
+//     })
+//   } else {
+//     news.forEach((item) => {
+//       item.classList.contains(filter) // does the animal have the filter in its class list?
+//         ? (item.style.display = 'block') // if yes, make sure .hidden is not applied
+//         : (item.style.display = 'none') // if no, apply .hidden
+//     })
+//   }
+// }
+
+//    ? item.classList.remove('hidden2') // if yes, make sure .hidden is not applied
+//    : item.classList.add('hidden2') // if no, apply .hidden
 
 ///////////////////////
 // LOAD MORE
@@ -469,27 +472,28 @@ window.filterNews = (e) => {
 //     }
 //   })
 // }
+/////////////////////////
+// New Load More
+// if (document.body.contains(document.querySelector('#loadmore'))) {
+//   const loadmore = document.querySelector('#loadmore')
 
-if (document.body.contains(document.querySelector('#loadmore'))) {
-  const loadmore = document.querySelector('#loadmore')
+//   let currentItems = 4
+//   loadmore.addEventListener('click', (e) => {
+//     const elementList = [...document.querySelectorAll('.news-item2')]
+//     for (let i = currentItems; i < currentItems + 2; i++) {
+//       if (elementList[i]) {
+//         elementList[i].style.display = 'block'
+//       }
+//     }
+//     currentItems += 2
 
-  let currentItems = 4
-  loadmore.addEventListener('click', (e) => {
-    const elementList = [...document.querySelectorAll('.news-item2')]
-    for (let i = currentItems; i < currentItems + 2; i++) {
-      if (elementList[i]) {
-        elementList[i].style.display = 'block'
-      }
-    }
-    currentItems += 2
-
-    // Load more button will be hidden after list fully loaded
-    if (currentItems >= elementList.length) {
-      event.target.style.display = 'none'
-      currentItems = 4
-    }
-  })
-}
+//     // Load more button will be hidden after list fully loaded
+//     if (currentItems >= elementList.length) {
+//       event.target.style.display = 'none'
+//       currentItems = 4
+//     }
+//   })
+// }
 
 ////////////////////////////
 // tabs
