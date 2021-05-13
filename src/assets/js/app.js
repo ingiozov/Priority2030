@@ -43,6 +43,31 @@ $(function () {
   })
 })
 
+const accBtnArr = document.querySelector(
+  '.grant-firststep-right__list-item--top'
+)
+
+const accBtnArrs = document.querySelectorAll(
+  '.grant-firststep-right__list-item--top'
+)
+const accArrow = document.querySelector(
+  '.grant-firststep-right__list-item--header'
+)
+const accListStyle = document.querySelector(
+  '.grant-firststep-right__list-item--list'
+)
+
+accBtnArrs.forEach((item) => {
+  item.addEventListener('click', () => {
+    if (!item.nextElementSibling) return
+    if (item.nextElementSibling.style.display === 'none') {
+      item.lastElementChild.classList.remove('_close')
+    } else {
+      item.lastElementChild.classList.add('_close')
+    }
+  })
+})
+
 //////////////////////////
 // Sticky nav
 
