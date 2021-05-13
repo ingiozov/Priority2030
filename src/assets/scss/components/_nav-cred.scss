@@ -12,9 +12,7 @@
 .social-links {
   list-style: none;
   margin: 0;
-  // margin-left: 7%;
   display: flex;
-
   font-size: 2rem;
 }
 
@@ -29,11 +27,9 @@
   a {
     color: $color-primary;
     line-height: 0.9;
-    // transition: all 0.2s;
 
     &:hover {
       color: $color-primary;
-      // transform: scale(1.1);
     }
 
     &:focus {
@@ -45,8 +41,6 @@
 .credentials {
   display: flex;
   align-items: center;
-
-  // margin-right: 7%;
 }
 
 @media only screen and (max-width: 1024px) {

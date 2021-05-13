@@ -38,17 +38,6 @@
     color: $white;
   }
 
-  // a {
-  //   font-size: inherit;
-  //   color: inherit;
-
-  // &:hover,
-  // &:focus,
-  // &:active {
-  //   color: inherit;
-  // }
-  // }
-
   img {
     margin-left: 5px;
     transform: translateY(-1.6px);
@@ -86,9 +75,7 @@
   color: #808080;
   display: flex;
   align-items: center;
-
   height: 8rem;
-  // padding-bottom: 2rem;
 
   img {
     margin-right: 1.5rem;
@@ -123,6 +110,5 @@
   transition: all 1s;
 }
 .section--hidden {
-  // opacity: 0;
   transform: translateY(5rem);
 }

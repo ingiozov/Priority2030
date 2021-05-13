@@ -65,7 +65,6 @@
 
   &--warning {
     font-size: 2rem;
-    // font-weight: bold;
     line-height: 2.3rem;
     margin-left: 4rem;
     margin-right: 12rem;
@@ -87,14 +86,10 @@
   &--link {
     font-size: 2rem;
     line-height: 2.3rem;
-
     color: $black;
-
     transition: all 0.2s;
-
     margin-bottom: 3.5rem;
     margin-left: 8rem;
-
     position: relative;
 
     &:hover,
@@ -130,7 +125,6 @@
   &--header {
     font-size: 2rem;
     line-height: 2.3rem;
-
     margin-bottom: 2.4rem;
     margin-top: 2.4rem;
     margin-left: 11rem;
@@ -141,9 +135,7 @@
 
     &::before {
       content: url(../img/icon-require-arrowup.png);
-
       margin-right: 1.7rem;
-
       position: absolute;
       top: 0;
       left: -3.7rem;
@@ -160,8 +152,6 @@
     list-style: none;
     background: $white;
     margin: 0;
-    // padding-top: 2.4rem;
-    // width: 100%;
   }
 
   &--item {
@@ -170,8 +160,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
-    // padding-bottom: 1.5rem;
-
     display: flex;
 
     .line {
@@ -192,7 +180,6 @@
 
       &::before {
         content: url(../img/dot2.png);
-        // margin-left: -2rem;
         margin-right: 0rem;
         position: absolute;
         top: 1rem;
@@ -220,7 +207,6 @@
 }
 
 .grant-firststep-right__list-item--line-dotbot {
-  // border: 1px solid red;
   margin-bottom: 2rem;
   position: relative;
 

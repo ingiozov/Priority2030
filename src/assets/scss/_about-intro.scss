@@ -30,14 +30,7 @@
 .about-intro-right {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  &__img {
-    // transform: scale(1.21);
-    // height: 450px;
-    // width: 710px;
-    // margin-top: auto;
-    margin-bottom: 10rem;
-  }
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1024px) {

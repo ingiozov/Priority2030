@@ -1,5 +1,4 @@
 .about-accordeon {
-  // height: 77rem;
   background: $white;
   padding-top: 8.6rem;
   padding-bottom: 8.6rem;
@@ -49,8 +48,6 @@
 }
 
 .accordeon__head.open {
-  // font-size: 5rem;
-
   &::after {
     transform: rotate(0deg);
   }
@@ -105,22 +102,16 @@
 }
 
 .acc-img-1 {
-  // width: 509px;
-  // height: 239px;
   width: 100%;
   height: auto;
 }
 
 .acc-img-2 {
-  // width: 438px;
-  // height: 388px;
   width: 100%;
   height: auto;
 }
 
 .acc-img-3 {
-  // width: 275px;
-  // height: 424px;
   width: auto;
   height: 80%;
   max-height: 433px;

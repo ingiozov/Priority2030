@@ -1,17 +1,8 @@
 import $ from 'jquery'
 import 'what-input'
 
-// Foundation JS relies on a global variable. In ES6, all imports are hoisted
-// to the top of the file so if we used `import` to import Foundation,
-// it would execute earlier than we have assigned the global variable.
-// This is why we have to use CommonJS require() here since it doesn't
-// have the hoisting behavior.
 window.jQuery = $
 require('foundation-sites')
-
-// If you want to pick and choose which modules to include, comment out the above and uncomment
-// the line below
-//import './lib/foundation-explicit-pieces';
 
 $(document).foundation()
 
@@ -52,28 +43,10 @@ $(function () {
   })
 })
 
-import './nav'
 //////////////////////////
 // Sticky nav
-// const header = document.querySelector('.intro')
-// const nav = document.querySelector('.nav')
 
-// const navHeight = nav.getBoundingClientRect().height
-
-// const stickyNav = function (entries) {
-//   const [entry] = entries
-
-//   if (!entry.isIntersecting) nav.classList.add('sticky2')
-//   else nav.classList.remove('sticky2')
-// }
-
-// const headerObserver = new IntersectionObserver(stickyNav, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: `-${navHeight}px`,
-// })
-
-// headerObserver.observe(header)
+import './nav'
 
 /////////////////////////
 // New off canvas
@@ -168,14 +141,8 @@ if (accBtns.length > 0) {
     accImg1.classList.remove('hidden')
     accImg1.nextElementSibling.classList.add('hidden')
     accImg2.nextElementSibling.classList.add('hidden')
-    // accImg2.classList.add('hidden')
-    // accImg3.classList.add('hidden')
   })
   accBtns[1].addEventListener('click', () => {
-    // accImg2.classList.toggle('hidden')
-    // accImg2.nextElementSibling.classList.add('hidden')
-    // accImg2.previousElementSibling.classList.add('hidden')
-
     if (accBtns[1].classList.contains('open')) {
       accImg2.classList.remove('hidden')
       accImg2.nextElementSibling.classList.add('hidden')
@@ -187,10 +154,6 @@ if (accBtns.length > 0) {
     }
   })
   accBtns[2].addEventListener('click', () => {
-    // accImg3.classList.remove('hidden')
-    // accImg3.previousElementSibling.classList.add('hidden')
-    // accImg2.previousElementSibling.classList.add('hidden')
-
     if (accBtns[2].classList.contains('open')) {
       accImg3.classList.remove('hidden')
       accImg3.previousElementSibling.classList.add('hidden')
@@ -201,22 +164,6 @@ if (accBtns.length > 0) {
       accImg3.previousElementSibling.classList.add('hidden')
     }
   })
-
-  // if (
-  //   !accBtns[1].nextElementSibling.classList.contains('open') &&
-  //   !accBtns[2].nextElementSibling.classList.contains('open')
-  // ) {
-  //   console.log('hello mthrfckr')
-  //   accImg1.classList.remove('hidden')
-  //   accImg1.nextElementSibling.classList.add('hidden')
-  //   accImg2.nextElementSibling.classList.add('hidden')
-  // }
-
-  // if (accBtns[1].nextElementSibling.classList.contains('open')) {
-  //   accImg2.classList.remove('hidden')
-  //   accImg2.nextElementSibling.classList.add('hidden')
-  //   accImg2.previousElementSibling.classList.add('hidden')
-  // }
 }
 
 ////////////////////////////
@@ -249,7 +196,7 @@ const weekdays = [
 const deadline = document.querySelector('.deadline')
 const items = document.querySelectorAll('.deadline-format h5')
 
-let futureDate = new Date(2021, 6, 19, 12, 30, 0)
+let futureDate = new Date(2021, 6, 18, 12, 30, 0)
 
 const year = futureDate.getFullYear()
 const hours = futureDate.getHours()
@@ -314,17 +261,12 @@ getRemainingTime()
 
 window.filterNews = (e) => {
   const loadmore = document.querySelector('#loadmore')
-  const news = document.querySelectorAll('.news-item2')
+  const news = document.querySelectorAll('.news-item')
   let filter = e.target.dataset.filter
   if (filter === '*') {
     news.forEach((item, index) => {
-      // if (index <= 3) {
-      //   item.style.display = 'block'
-      //   if (loadmore) loadmore.style.display = 'block'
-      // } else item.style.display = 'none'
-
       item.style.display = 'block'
-      loadmore.style.display = 'none'
+      if (loadmore) loadmore.style.display = 'none'
     })
   } else {
     news.forEach((item) => {
@@ -335,9 +277,6 @@ window.filterNews = (e) => {
   }
 }
 
-//    ? item.classList.remove('hidden2') // if yes, make sure .hidden is not applied
-//    : item.classList.add('hidden2') // if no, apply .hidden
-
 ///////////////////////
 // LOAD MORE
 // New Load More
@@ -346,7 +285,7 @@ if (document.body.contains(document.querySelector('#loadmore'))) {
 
   let currentItems = 4
   loadmore.addEventListener('click', (e) => {
-    const elementList = [...document.querySelectorAll('.news-item2')]
+    const elementList = [...document.querySelectorAll('.news-item')]
     for (let i = currentItems; i < currentItems + 2; i++) {
       if (elementList[i]) {
         elementList[i].style.display = 'block'

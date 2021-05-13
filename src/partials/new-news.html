@@ -40,8 +40,8 @@
       События
     </button>
   </div>
-  <div class="news-container2 grid-x grid-margin-x grid-margin-y">
-    <div class="news-item2 science cell small-12 medium-6">
+  <div class="news-container grid-x grid-margin-x grid-margin-y">
+    <div class="news-item science cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-1.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -62,7 +62,7 @@
       </a>
     </div>
 
-    <div class="news-item2 states cell small-12 medium-6">
+    <div class="news-item states cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-2.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -82,7 +82,7 @@
       </a>
     </div>
 
-    <div class="news-item2 talent cell small-12 medium-6">
+    <div class="news-item talent cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-3.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -102,7 +102,7 @@
       </a>
     </div>
 
-    <div class="news-item2 parnter cell small-12 medium-6">
+    <div class="news-item parnter cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-4.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -123,7 +123,7 @@
       </a>
     </div>
 
-    <div class="news-item2 events cell small-12 medium-6">
+    <div class="news-item events cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-6.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -144,7 +144,7 @@
       </a>
     </div>
 
-    <div class="news-item2 science cell small-12 medium-6">
+    <div class="news-item science cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-1.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -165,7 +165,7 @@
       </a>
     </div>
 
-    <div class="news-item2 states cell small-12 medium-6">
+    <div class="news-item states cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-2.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -185,7 +185,7 @@
       </a>
     </div>
 
-    <div class="news-item2 talent cell small-12 medium-6">
+    <div class="news-item talent cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-3.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -205,7 +205,7 @@
       </a>
     </div>
 
-    <div class="news-item2 parnter cell small-12 medium-6">
+    <div class="news-item parnter cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-4.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -226,7 +226,7 @@
       </a>
     </div>
 
-    <div class="news-item2 events cell small-12 medium-6">
+    <div class="news-item events cell small-12 medium-6">
       <div class="news-item--img">
         <object data="../assets/img/img-news-6.jpg" type="image/png">
           <img src="../assets/img/no_photo.png" alt="news-image" />
@@ -251,52 +251,3 @@
     смотреть еще<img src="../assets/img/btn-union.png" alt="" />
   </button>
 </section>
-
-<!-- <script>
-  ///////////////////////
-  // LOAD MORE
-
-  if (document.body.contains(document.querySelector('#loadmore'))) {
-    const loadmore = document.querySelector('#loadmore')
-
-    let currentItems = 4
-    loadmore.addEventListener('click', (e) => {
-      const elementList = [...document.querySelectorAll('.news-item2')]
-      for (let i = currentItems; i < currentItems + 2; i++) {
-        if (elementList[i]) {
-          elementList[i].style.display = 'block'
-        }
-      }
-      currentItems += 2
-
-      // Load more button will be hidden after list fully loaded
-      if (currentItems >= elementList.length) {
-        event.target.style.display = 'none'
-        currentItems = 4
-      }
-    })
-  }
-
-  /////////////////////////////
-  // New News-Filter
-
-  window.filterNews = (e) => {
-    const loadmore = document.querySelector('#loadmore')
-    const news = document.querySelectorAll('.news-item2')
-    let filter = e.target.dataset.filter
-    if (filter === '*') {
-      news.forEach((item, index) => {
-        if (index <= 3) {
-          item.style.display = 'block'
-          if (loadmore) loadmore.style.display = 'block'
-        } else item.style.display = 'none'
-      })
-    } else {
-      news.forEach((item) => {
-        item.classList.contains(filter)
-          ? (item.style.display = 'block')
-          : (item.style.display = 'none')
-      })
-    }
-  }
-</script> -->

@@ -244,16 +244,8 @@
     font-size: 2rem;
   }
 
-  .architecture-wrapper {
-    // padding: 0 0rem;
-  }
-
   .architecture-left {
     .left-content {
-      img {
-        // width: 2rem;
-      }
-
       .left-content-text {
         font-size: 1.6rem;
       }
@@ -360,32 +352,20 @@
   }
 
   .architecture-heading {
-    // text-align: left;
-    // margin-bottom: 2.1rem;
     font-size: 0.8rem;
-  }
-
-  .architecture-container {
-    // overflow-x: scroll;
   }
 
   .architecture-wrapper {
     padding: 0 0rem;
-    // width: 992px;
   }
 
   .architecture-left {
     .left-content {
-      // display: flex;
-      // align-items: center;
-
       img {
         width: 2rem;
       }
 
       .left-content-text {
-        // text-align: left;
-        // margin-left: 2.7rem;
         font-size: 0.8rem;
       }
     }
@@ -395,7 +375,7 @@
     .center-left {
       padding-right: 0.5rem;
       padding-left: 0.5rem;
-      // border: none;
+
       .center-left-top {
         h6 {
           font-size: 0.7rem;
@@ -419,7 +399,6 @@
     .center-right {
       padding-right: 0.5rem;
       padding-left: 0.5rem;
-      // border: none;
 
       .center-right-top {
         h6 {
@@ -443,8 +422,6 @@
     .center-bottom {
       padding-left: 0.5rem;
       padding-right: 0.5rem;
-      // border: none;
-      // margin-bottom: 3.7rem;
 
       .center-bottom--content {
         h6 {
@@ -459,29 +436,19 @@
   }
 
   .architecture-right {
-    // align-items: flex-start;
-
     .right-content {
-      // margin: 0;
-
       .right-content-text {
         font-size: 0.8rem;
-        // text-align: left;
       }
 
       img {
-        // margin: 0;
-        // margin-bottom: 4rem;
         width: 5rem;
       }
     }
 
     .right-content-bottom {
-      // margin: 0;
-
       .right-content-bottom-text {
         font-size: 0.7rem;
-        // text-align: left;
       }
     }
   }

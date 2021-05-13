@@ -7,19 +7,11 @@
   margin-bottom: 5rem;
 }
 
-.process-wrapper {
-  // margin: auto;
-  // max-width: 1200px;
-}
-
 #progress-bar-container {
   position: relative;
   width: 100%;
   margin: 0 auto;
   margin-bottom: 8.2rem;
-
-  // height: 415px;
-  // margin-top: 65px;
 }
 
 #progress-bar-container ul {
@@ -28,10 +20,7 @@
   margin: 0 1.5rem;
   padding-top: 1.5rem;
   z-index: 2;
-  // position: absolute;
   width: 100%;
-  // margin-top: -40px;
-
   display: flex;
 
   &::after {
@@ -44,22 +33,16 @@
 
 #progress-bar-container li {
   list-style: none;
-
   width: 33.3333%;
-
   color: $dark-gray;
-
   font-size: 1.8rem;
   line-height: 150%;
   cursor: pointer;
   font-weight: 700;
   transition: all ease 0.2s;
-
   height: 20rem;
   position: relative;
-
   margin-right: 1.5rem;
-
   z-index: 3;
 }
 
@@ -89,8 +72,6 @@
   margin-top: auto;
   border: solid 7px $dark-gray;
   border-radius: 50%;
-  // margin-top: 40px;
-  // box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
   transition: all ease 1s;
 }
 
@@ -111,8 +92,6 @@
   position: absolute;
   left: 3px;
   top: 207px;
-  // bottom: 10%;
-  // left: 10%;
   z-index: 1;
   border-radius: 50px;
   transition: all ease 0.9s;
