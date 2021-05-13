@@ -76,6 +76,18 @@ import './nav'
 // headerObserver.observe(header)
 
 /////////////////////////
+// New off canvas
+
+const iconMenu = document.querySelector('.menu__icon')
+if (iconMenu) {
+  const menuBody = document.querySelector('.menu__body')
+  iconMenu.addEventListener('click', () => {
+    document.body.classList.toggle('_lock')
+    iconMenu.classList.toggle('_active')
+    menuBody.classList.toggle('_active')
+  })
+}
+
 /////////////////////
 // Reveal sections
 
@@ -90,7 +102,7 @@ const revealSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.15,
+  threshold: 0.05,
 })
 
 allSections.forEach((section) => {
@@ -156,20 +168,55 @@ if (accBtns.length > 0) {
     accImg1.classList.remove('hidden')
     accImg1.nextElementSibling.classList.add('hidden')
     accImg2.nextElementSibling.classList.add('hidden')
-
     // accImg2.classList.add('hidden')
     // accImg3.classList.add('hidden')
   })
   accBtns[1].addEventListener('click', () => {
-    accImg2.classList.remove('hidden')
-    accImg2.nextElementSibling.classList.add('hidden')
-    accImg2.previousElementSibling.classList.add('hidden')
+    // accImg2.classList.toggle('hidden')
+    // accImg2.nextElementSibling.classList.add('hidden')
+    // accImg2.previousElementSibling.classList.add('hidden')
+
+    if (accBtns[1].classList.contains('open')) {
+      accImg2.classList.remove('hidden')
+      accImg2.nextElementSibling.classList.add('hidden')
+      accImg2.previousElementSibling.classList.add('hidden')
+    } else {
+      accImg2.classList.add('hidden')
+      accImg2.previousElementSibling.classList.remove('hidden')
+      accImg2.nextElementSibling.classList.add('hidden')
+    }
   })
   accBtns[2].addEventListener('click', () => {
-    accImg3.classList.remove('hidden')
-    accImg3.previousElementSibling.classList.add('hidden')
-    accImg2.previousElementSibling.classList.add('hidden')
+    // accImg3.classList.remove('hidden')
+    // accImg3.previousElementSibling.classList.add('hidden')
+    // accImg2.previousElementSibling.classList.add('hidden')
+
+    if (accBtns[2].classList.contains('open')) {
+      accImg3.classList.remove('hidden')
+      accImg3.previousElementSibling.classList.add('hidden')
+      accImg2.previousElementSibling.classList.add('hidden')
+    } else {
+      accImg3.classList.add('hidden')
+      accImg2.previousElementSibling.classList.remove('hidden')
+      accImg3.previousElementSibling.classList.add('hidden')
+    }
   })
+
+  // if (
+  //   !accBtns[1].nextElementSibling.classList.contains('open') &&
+  //   !accBtns[2].nextElementSibling.classList.contains('open')
+  // ) {
+  //   console.log('hello mthrfckr')
+  //   accImg1.classList.remove('hidden')
+  //   accImg1.nextElementSibling.classList.add('hidden')
+  //   accImg2.nextElementSibling.classList.add('hidden')
+  // }
+
+  // if (accBtns[1].nextElementSibling.classList.contains('open')) {
+  //   accImg2.classList.remove('hidden')
+  //   accImg2.nextElementSibling.classList.add('hidden')
+  //   accImg2.previousElementSibling.classList.add('hidden')
+  // }
 }
 
 ////////////////////////////
@@ -271,10 +318,13 @@ window.filterNews = (e) => {
   let filter = e.target.dataset.filter
   if (filter === '*') {
     news.forEach((item, index) => {
-      if (index <= 3) {
-        item.style.display = 'block'
-        if (loadmore) loadmore.style.display = 'block'
-      } else item.style.display = 'none'
+      // if (index <= 3) {
+      //   item.style.display = 'block'
+      //   if (loadmore) loadmore.style.display = 'block'
+      // } else item.style.display = 'none'
+
+      item.style.display = 'block'
+      loadmore.style.display = 'none'
     })
   } else {
     news.forEach((item) => {
@@ -344,11 +394,11 @@ if (tabsContent.length > 0) {
 // text reveal
 
 const text = [
-  'Лидерство в науке,<br />образовании<br />и технологиях',
+  'Лидерство в&nbsp;науке, образовании и&nbsp;технологиях',
   'Содействие региональному развитию',
   'Формирование цифровых компетенций',
-  'Глобальная конкуренто<br />способность российских университетов',
-  'Развитие<br /> и самореализация талантов',
+  'Глобальная конкурентоспособность российских университетов',
+  'Развитие и&nbsp;самореализация талантов',
 ]
 let counter = 0
 const elem = document.getElementById('word')

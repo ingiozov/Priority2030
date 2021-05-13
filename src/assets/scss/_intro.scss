@@ -10,11 +10,14 @@
   align-items: center;
 
   .intro-heading {
-    font-size: 4.9rem;
+    font-size: 4.6rem;
     line-height: 105.2%;
     font-weight: bold;
     min-height: 20.8rem;
     margin: 0% 0 5rem 0;
+
+    position: relative;
+    z-index: 2;
   }
 }
 
@@ -95,7 +98,7 @@
   .intro-left {
     padding-left: 2rem;
     .intro-heading {
-      font-size: 3rem;
+      font-size: 2.4rem;
       margin-bottom: 2rem;
       height: 15.8rem;
     }

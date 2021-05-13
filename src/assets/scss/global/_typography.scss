@@ -17,6 +17,9 @@
 }
 
 .btn-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 23.2rem;
   height: 4.7rem;
   font-size: 1.4rem;
@@ -28,6 +31,23 @@
   cursor: pointer;
   margin-bottom: 3.6rem;
   transition: all 0.2s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+  }
+
+  // a {
+  //   font-size: inherit;
+  //   color: inherit;
+
+  // &:hover,
+  // &:focus,
+  // &:active {
+  //   color: inherit;
+  // }
+  // }
 
   img {
     margin-left: 5px;
@@ -103,6 +123,6 @@
   transition: all 1s;
 }
 .section--hidden {
-  opacity: 0;
-  transform: translateY(10rem);
+  // opacity: 0;
+  transform: translateY(5rem);
 }

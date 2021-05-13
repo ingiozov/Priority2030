@@ -150,8 +150,12 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .news-container2 {
+    padding: 0 5rem;
+  }
+
   .news-item--img {
-    min-height: 15rem;
+    max-height: 25rem;
   }
 
   .news-buttons {
@@ -164,11 +168,14 @@
 }
 
 @media only screen and (max-width: 640px) {
+  .news-container2 {
+    padding: 0 2rem;
+  }
   .news {
     margin-top: 12rem;
   }
 
   .news-item--img {
-    min-height: 15rem;
+    // max-height: 25rem;
   }
 }
