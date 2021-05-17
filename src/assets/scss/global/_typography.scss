@@ -69,24 +69,6 @@
   }
 }
 
-.grant-link {
-  font-size: 1.5rem;
-  line-height: 1.8rem;
-  color: #808080;
-  display: flex;
-  align-items: center;
-  height: 8rem;
-
-  img {
-    margin-right: 1.5rem;
-  }
-
-  &:hover,
-  &:focus {
-    color: $color-primary;
-  }
-}
-
 .year {
   font-size: 135.577px;
   line-height: 105.2%;

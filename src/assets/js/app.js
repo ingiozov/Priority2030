@@ -28,50 +28,158 @@ $(document).ready(function () {
   })
 })
 
-////////////////////////////
-// Accordeon
+////////////////////////////////////////
+////////////////////////////////////////
+// New Accordeon 'Grant page'
 
-$(function () {
-  $('ul ul:not(:first)')
-    .hide()
-    .on('click', function (e) {
-      e.stopPropagation()
-    })
-
-  $('.js-menu > li').on('click', function () {
-    $(this).find('ul').stop(true, true).slideToggle()
-  })
-})
-
-const accBtnArr = document.querySelector(
-  '.grant-firststep-right__list-item--top'
-)
-
-const accBtnArrs = document.querySelectorAll(
-  '.grant-firststep-right__list-item--top'
-)
-const accArrow = document.querySelector(
-  '.grant-firststep-right__list-item--header'
-)
-const accListStyle = document.querySelector(
-  '.grant-firststep-right__list-item--list'
-)
-
-accBtnArrs.forEach((item) => {
-  item.addEventListener('click', () => {
-    if (!item.nextElementSibling) return
-    if (item.nextElementSibling.style.display === 'none') {
-      item.lastElementChild.classList.remove('_close')
-    } else {
-      item.lastElementChild.classList.add('_close')
+function initAcc(elem, option) {
+  //addEventListener on mouse click
+  document.addEventListener('click', function (e) {
+    //check is the right element clicked
+    if (!e.target.matches(elem + ' .a-btn')) return
+    else {
+      //check if element contains active class
+      if (!e.target.parentElement.classList.contains('active')) {
+        if (option == true) {
+          //if option true remove active class from all other accordions
+          var elementList = document.querySelectorAll(elem + ' .a-container')
+          Array.prototype.forEach.call(elementList, function (e) {
+            e.classList.remove('active')
+          })
+        }
+        //add active class on cliked accordion
+        e.target.parentElement.classList.add('active')
+      } else {
+        //remove active class on cliked accordion
+        e.target.parentElement.classList.remove('active')
+      }
     }
   })
+}
+
+//activate accordion function
+initAcc('.accordion', false)
+
+////////////////////////////
+////////////////////////////
+// modal
+
+const popupLinks = document.querySelectorAll('.grant-link')
+const body = document.querySelector('body')
+const lockPadding = document.querySelectorAll('.lock-padding')
+
+let unlock = true
+
+const timeout = 800
+
+if (popupLinks.length > 0) {
+  popupLinks.forEach((popupLink) => {
+    popupLink.addEventListener('click', (e) => {
+      e.preventDefault()
+      const popupName = popupLink.getAttribute('href').replace('#', '')
+      const currentPopup = document.getElementById(popupName)
+      popupOpen(currentPopup)
+    })
+  })
+}
+
+const popupCloseIcons = document.querySelectorAll('.close-popup')
+
+popupCloseIcons.forEach((icon) => {
+  icon.addEventListener('click', (e) => {
+    e.preventDefault()
+    popupClose(icon.closest('.popup'))
+  })
 })
+
+function popupOpen(currentPopup) {
+  if (currentPopup && unlock) {
+    const popupActive = document.querySelector('.popup.open')
+    if (popupActive) {
+      popupClose(popupActive, false)
+    } else {
+      bodyLock()
+    }
+
+    currentPopup.classList.add('open')
+    currentPopup.addEventListener('click', (e) => {
+      if (!e.target.closest('.popup__content')) {
+        popupClose(e.target.closest('.popup'))
+      }
+    })
+  }
+}
+
+function popupClose(popupActive, doUnlock = true) {
+  if (unlock) {
+    popupActive.classList.remove('open')
+    if (doUnlock) {
+      bodyUnLock()
+    }
+  }
+}
+
+function bodyLock() {
+  const lockPaddingValue =
+    window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
+
+  if (lockPadding.length > 0) {
+    for (let index = 0; index < lockPadding; index++) {
+      const el = lockPadding[index]
+      el.style.paddingRight = lockPaddingValue
+    }
+  }
+
+  body.style.paddingRight = lockPaddingValue
+  body.classList.add('lock')
+
+  unlock = false
+  setTimeout(() => {
+    unlock = true
+  }, timeout)
+}
+
+function bodyUnLock() {
+  setTimeout(() => {
+    if (lockPadding.length > 0) {
+      for (let index = 0; index < lockPadding; index++) {
+        const el = lockPadding[index]
+        el.style.paddingRight = '0px'
+      }
+    }
+
+    body.style.paddingRight = '0px'
+    body.classList.remove('lock')
+  }, timeout)
+
+  unlock = false
+  setTimeout(() => {
+    unlock = true
+  }, timeout)
+}
 
 //////////////////////////
 // Sticky nav
 
-import './nav'
+const header = document.querySelector('.intro')
+const nav = document.querySelector('.nav')
+
+const navHeight = nav.getBoundingClientRect().height
+
+const stickyNav = function (entries) {
+  const [entry] = entries
+
+  if (!entry.isIntersecting) nav.classList.add('_sticky')
+  else nav.classList.remove('_sticky')
+}
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+})
+
+headerObserver.observe(header)
 
 /////////////////////////
 // New off canvas
