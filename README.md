@@ -1,5 +1,5 @@
 # Priority 2030
-Russian national educational project. HTML, CSS, SCSS, Vanilla JS, a bit of design ideas
+Russian national project. HTML, CSS, SCSS, Vanilla JS, a bit of design ideas
 
 Foundation zurb stack was used. 
 npm install
